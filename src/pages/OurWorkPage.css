@@ -1,0 +1,130 @@
+.our-work-page {
+  padding-bottom: 0;
+}
+
+.pillar-detail-section {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.pillar-detail-section.alt-bg {
+  background-color: #F8F5EE;
+}
+
+.pillar-detail-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.pillar-detail-grid.reverse {
+  grid-template-columns: 0.85fr 1.15fr;
+}
+
+.pillar-detail-grid.reverse .pillar-text-content {
+  order: 2;
+}
+
+.pillar-detail-grid.reverse .pillar-visual-side {
+  order: 1;
+}
+
+.pillar-badge-num {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary-amber-dark);
+  background-color: var(--primary-amber-light);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: 14px;
+}
+
+.pillar-heading {
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.pillar-summary {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.pillar-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+.feature-item svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.pillar-action-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.pillar-image-frame {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 4px solid #FFF;
+  aspect-ratio: 4 / 3;
+  background-color: #121316;
+}
+
+.pillar-full-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.visual-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(18, 19, 22, 0.85);
+  color: #FFF;
+  padding: 10px 16px;
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .pillar-detail-grid,
+  .pillar-detail-grid.reverse {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .pillar-detail-grid.reverse .pillar-text-content {
+    order: 1;
+  }
+  .pillar-detail-grid.reverse .pillar-visual-side {
+    order: 2;
+  }
+}

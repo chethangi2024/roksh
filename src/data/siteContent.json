@@ -1,0 +1,82 @@
+{
+  "name": "Roksh Samsthe Foundation",
+  "shortName": "Roksh",
+  "tagline": "Rescuing, Healing, and Protecting Vulnerable Animals",
+  "subtitle": "Animal welfare initiative committed to rescuing, healing, and protecting vulnerable animals across Bengaluru.",
+  "vision": "A world where every dog and cat is safe, loved, and treated with dignity.",
+  "mission": "To rescue, treat, and protect dogs and cats in need; reunite them with their communities whenever safe, find loving homes through responsible adoption, and provide lifelong care for those who cannot return to the streets or find homes. Through awareness and education, we strive to build a compassionate community where every animal matters.",
+  "philosophy": "With every rescue and every story of recovery, Roksh Samsthe stands for one simple belief: every life matters.",
+  "contact": {
+    "email": "rokshsamsthe@gmail.com",
+    "whatsappNumber": "+919876543210",
+    "whatsappDisplay": "WhatsApp Distress Helpline",
+    "location": "Bengaluru, Karnataka, India"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/roksh_samsthe",
+    "facebook": "https://www.facebook.com/share/1HwTiDoQDi/",
+    "youtube": "https://www.youtube.com/@rokshhealingtailz",
+    "legacySite": "https://rokshsamsthe.wixsite.com/roksh"
+  },
+  "banking": {
+    "beneficiary": "ROKSH SAMSTHE FOUNDATION",
+    "upiId": "roksh@idfcbank",
+    "bankName": "IDFC FIRST Bank",
+    "accountType": "Foundation / Current Account",
+    "qrImage": "/assets/bank-qr.jpeg",
+    "note": "100% of your contributions directly power medical treatments, chemotherapy, medicines, foster food, and field rescue operations.",
+    "taxExemptionNote": "Tax benefit details and official payment acknowledgement receipts can be requested by emailing rokshsamsthe@gmail.com with your transaction reference."
+  },
+  "pillars": [
+    {
+      "id": "emergency-rescue",
+      "title": "Emergency Rescue & Triage",
+      "shortDesc": "Responding to animals facing severe trauma, abandonment, road accidents, and acute distress across Bengaluru.",
+      "icon": "Ambulance",
+      "image": "/assets/rescues/sapna-hero.jpeg"
+    },
+    {
+      "id": "veterinary-treatment",
+      "title": "Veterinary Care & Oncology",
+      "shortDesc": "Intensive medical care including TVT cancer chemotherapy, severe skin disease treatment, surgery, and pain relief.",
+      "icon": "Stethoscope",
+      "image": "/assets/rescues/sapna-treatment.png"
+    },
+    {
+      "id": "community-feeding",
+      "title": "Daily Community Feeding",
+      "shortDesc": "Nourishing hungry street dogs across commercial zones and industrial sectors with wholesome, hygienic cooked meals.",
+      "icon": "Utensils",
+      "image": "/assets/feeding/feeding-cauldron-boot.jpeg"
+    },
+    {
+      "id": "lifelong-boarding",
+      "title": "Rehabilitation & Safe Boarding",
+      "shortDesc": "Dignified lifelong shelter, foster rehabilitation, and careful responsible rehoming for animals unable to survive on streets.",
+      "icon": "Home",
+      "image": "/assets/rescues/siddu-recovered.png"
+    }
+  ],
+  "impactMetrics": [
+    {
+      "value": "100%",
+      "label": "Genuine Photographic Proof",
+      "detail": "Every animal shown is an actual Roksh rescue case with medical documentation."
+    },
+    {
+      "value": "Active",
+      "label": "Daily Street Feeding",
+      "detail": "Nutritious cooked meals distributed consistently along verified Bengaluru routes."
+    },
+    {
+      "value": "Critical",
+      "label": "Chemotherapy & Care",
+      "detail": "Comprehensive cancer care and dermatological rehabilitation under veterinary care."
+    },
+    {
+      "value": "Lifelong",
+      "label": "Dignity & Boarding",
+      "detail": "Safe shelter for vulnerable animals who cannot safely return to the street."
+    }
+  ]
+}

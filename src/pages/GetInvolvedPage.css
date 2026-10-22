@@ -1,0 +1,198 @@
+.get-involved-page {
+  padding-bottom: 80px;
+}
+
+.involvement-options-section {
+  padding: 80px 0;
+}
+
+.option-card {
+  background: #FFF;
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.option-icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.option-icon-box.gold {
+  background-color: var(--primary-amber-light);
+}
+
+.option-icon-box.green {
+  background-color: var(--accent-emerald-light);
+}
+
+.option-icon-box.dark {
+  background-color: #E5E7EB;
+}
+
+.option-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+.option-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.option-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-light);
+}
+
+.option-points li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+/* Volunteer Form */
+.volunteer-form-section {
+  padding: 40px 0 80px;
+}
+
+.volunteer-form-wrapper {
+  max-width: 760px;
+  margin: 0 auto;
+  background: #FFF;
+  border-radius: 28px;
+  padding: 48px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-light);
+}
+
+.form-heading {
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  color: var(--text-main);
+  margin: 10px 0 8px;
+}
+
+.form-subheading {
+  font-size: 0.95rem;
+  margin-bottom: 32px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: var(--surface-canvas);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  transition: border-color var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-amber);
+  background: #FFF;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--surface-canvas);
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+}
+
+.checkbox-group input {
+  margin-top: 3px;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-amber-dark);
+}
+
+.checkbox-group label {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.form-submit-row {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-privacy-note {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.success-banner {
+  background: #F0FDF4;
+  border: 2px solid #86EFAC;
+  border-radius: var(--radius-lg);
+  padding: 40px 24px;
+  text-align: center;
+  color: #166534;
+}
+
+@media (max-width: 700px) {
+  .volunteer-form-wrapper {
+    padding: 30px 20px;
+  }
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}

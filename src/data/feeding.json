@@ -1,0 +1,67 @@
+[
+  {
+    "id": "drive-oct-2024",
+    "title": "East & North Bengaluru Sustenance Drive",
+    "date": "2024-10-13",
+    "location": "Industrial Corridors & Perimeter Hubs, Bengaluru",
+    "mealsServed": "150+ Fresh Meals",
+    "animalsCount": "120+ Dogs & Mother Litters",
+    "menu": "Warm steamed turmeric rice, farm eggs, chicken broth, and puppy kibble",
+    "description": "Roksh volunteers deployed mobile vehicle units carrying large heavy-gauge food cauldrons. The drive focused on desolate industrial routes where community animals face chronic food scarcity on weekends.",
+    "primaryImage": "/assets/feeding/feeding-cauldron-boot.jpeg",
+    "gallery": [
+      "/assets/feeding/feeding-cauldron-boot.jpeg",
+      "/assets/feeding/feeding-mother-pups.jpeg",
+      "/assets/feeding/WhatsApp Image 2024-10-13 at 21.39.51.jpeg",
+      "/assets/feeding/WhatsApp Image 2024-10-13 at 21.39.51 (1).jpeg"
+    ],
+    "highlights": [
+      "Large cauldrons prepped fresh early morning",
+      "Special meal portions for lactating mothers and young pups",
+      "Field health checks performed during distribution"
+    ]
+  },
+  {
+    "id": "drive-monsoon-2021",
+    "title": "Monsoon Relief & Street Nourishment",
+    "date": "2021-06-20",
+    "location": "Central & Residential Bangalore Localities",
+    "mealsServed": "Daily Route Sustenance",
+    "animalsCount": "80+ Regular Community Dogs",
+    "menu": "Cooked rice with protein broth, served in clean individual bowls",
+    "description": "Heavy monsoon rains often leave street animals shivering and without access to scavenged food. Our team operates regular feeding routes using clean bowls to ensure safe, hygienic feeding without littering streets.",
+    "primaryImage": "/assets/feeding/feeding-purple-bowl.jpg",
+    "gallery": [
+      "/assets/feeding/feeding-purple-bowl.jpg",
+      "/assets/feeding/20210620_095332.jpg",
+      "/assets/feeding/20210625_110224.jpg",
+      "/assets/feeding/20210625_113320.jpg"
+    ],
+    "highlights": [
+      "Individual clean purple bowls used to prevent contamination",
+      "Friendly socialization and trust-building with shy street dogs",
+      "Identification of dogs needing wound treatment"
+    ]
+  },
+  {
+    "id": "drive-community-2022",
+    "title": "Community Feeding & Health Observation",
+    "date": "2022-05-08",
+    "location": "South Bengaluru Neighbourhoods",
+    "mealsServed": "110+ Nutritious Servings",
+    "animalsCount": "95 Dogs",
+    "menu": "High-protein meal mix, boiled eggs, calcium fortified broth",
+    "description": "A scheduled weekend initiative combining meal distribution with general wellness observation, deworming tablet administration, and citizen education on peaceful community co-existence.",
+    "primaryImage": "/assets/feeding/IMG-20220508-WA0006.jpg",
+    "gallery": [
+      "/assets/feeding/IMG-20220508-WA0006.jpg",
+      "/assets/feeding/Screenshot_20220903_125456.jpg",
+      "/assets/feeding/20210717_144402.jpg"
+    ],
+    "highlights": [
+      "Spot deworming administered with food for safe consumption",
+      "Engaging local shopkeepers to encourage daily water bowl placement",
+      "Record keeping for regular pack dynamics"
+    ]
+  }
+]
