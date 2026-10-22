@@ -51,7 +51,7 @@
   color: var(--text-muted);
 }
 
-.rescue-date-badge, .rescue-loc-badge {
+.rescue-date-text, .rescue-loc-text {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -71,13 +71,15 @@
 }
 
 .rescue-card-diag {
-  font-size: 0.85rem;
-  color: var(--accent-rose);
-  background-color: var(--accent-rose-light);
-  padding: 6px 10px;
-  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  color: var(--text-muted);
   margin-bottom: 12px;
-  line-height: 1.4;
+  line-height: 1.5;
+}
+
+.rescue-card-diag strong {
+  color: var(--text-main);
+  font-weight: 600;
 }
 
 .rescue-card-summary {
@@ -95,6 +97,7 @@
   padding-top: 16px;
   border-top: 1px solid var(--border-light);
   gap: 12px;
+  flex-wrap: wrap;
 }
 
 .btn-read-story {

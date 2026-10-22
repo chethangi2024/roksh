@@ -9,16 +9,21 @@ export default function RescuesPage({ onOpenDonate }) {
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredRescues = rescuesData.filter((rescue) => {
+    const isRecovered = rescue.statusCode === 'recovered' || rescue.statusBadge?.toLowerCase().includes('recover') || rescue.statusBadge?.toLowerCase().includes('adopt');
+    const isActive = rescue.statusCode === 'active' || !isRecovered;
+
     const matchesFilter = 
       activeFilter === 'all' ||
-      (activeFilter === 'active' && rescue.statusCode === 'active') ||
-      (activeFilter === 'recovered' && rescue.statusCode === 'recovered');
+      (activeFilter === 'active' && isActive) ||
+      (activeFilter === 'recovered' && isRecovered);
 
-    const matchesSearch = 
-      rescue.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      rescue.breed.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      rescue.diagnosis.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      rescue.title.toLowerCase().includes(searchQuery.toLowerCase());
+    const nameStr = (rescue.animalName || rescue.name || '').toLowerCase();
+    const breedStr = (rescue.species || rescue.breed || '').toLowerCase();
+    const diagStr = (rescue.diagnosis || '').toLowerCase();
+    const titleStr = (rescue.title || '').toLowerCase();
+    const q = searchQuery.toLowerCase().trim();
+
+    const matchesSearch = !q || nameStr.includes(q) || breedStr.includes(q) || diagStr.includes(q) || titleStr.includes(q);
 
     return matchesFilter && matchesSearch;
   });
@@ -28,7 +33,6 @@ export default function RescuesPage({ onOpenDonate }) {
       {/* Page Header */}
       <section className="page-hero">
         <div className="container">
-          <span className="section-eyebrow">Documentary Records</span>
           <h1 className="page-hero-title heading-display">
             Latest Rescues & Field Updates Archive
           </h1>

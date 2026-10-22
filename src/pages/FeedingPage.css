@@ -272,3 +272,11 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 600px) {
+  .sponsor-meal-card {
+    padding: 24px 18px;
+    border-radius: var(--radius-lg);
+  }
+}
+

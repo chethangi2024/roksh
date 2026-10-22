@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, Copy, Check, Heart, ShieldCheck, ExternalLink, QrCode } from 'lucide-react';
+import { X, Copy, Check, ShieldCheck, ExternalLink, QrCode } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { useToast } from '../context/ToastContext';
 import siteContent from '../data/siteContent.json';
@@ -73,10 +73,6 @@ export default function QuickDonateModal({ isOpen, onClose, initialTier = null }
         </button>
 
         <div className="modal-header">
-          <div className="modal-badge">
-            <Heart size={14} fill="#BE123C" color="#BE123C" />
-            <span>Direct Community Support</span>
-          </div>
           <h2 id="donate-modal-title" className="modal-title">
             Support Roksh Samsthe Foundation
           </h2>

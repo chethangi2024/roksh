@@ -16,6 +16,7 @@ import FeedingPage from './pages/FeedingPage';
 import GetInvolvedPage from './pages/GetInvolvedPage';
 import DonatePage from './pages/DonatePage';
 import ContactPage from './pages/ContactPage';
+import AdoptPage from './pages/AdoptPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
 
@@ -47,6 +48,7 @@ export default function App() {
             <Route path="/rescues" element={<RescuesPage onOpenDonate={handleOpenDonate} />} />
             <Route path="/rescues/:id" element={<RescueDetailPage onOpenDonate={handleOpenDonate} />} />
             <Route path="/feeding" element={<FeedingPage onOpenDonate={handleOpenDonate} />} />
+            <Route path="/adopt" element={<AdoptPage onOpenDonate={handleOpenDonate} />} />
             <Route path="/get-involved" element={<GetInvolvedPage onOpenDonate={handleOpenDonate} />} />
             <Route path="/donate" element={<DonatePage />} />
             <Route path="/contact" element={<ContactPage />} />

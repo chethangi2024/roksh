@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, MapPin, MessageCircle, AlertTriangle, Send, ShieldCheck, CheckCircle2, PhoneCall } from 'lucide-react';
+import { Mail, MapPin, MessageCircle, Send, ShieldCheck, CheckCircle2, PhoneCall } from 'lucide-react';
 import { useToast } from '../context/ToastContext';
 import siteContent from '../data/siteContent.json';
 import './ContactPage.css';
@@ -29,7 +29,6 @@ export default function ContactPage() {
       {/* Page Hero */}
       <section className="page-hero">
         <div className="container">
-          <span className="section-eyebrow">Get in Touch</span>
           <h1 className="page-hero-title heading-display">
             Contact & Distress Reporting Protocol
           </h1>
@@ -43,11 +42,6 @@ export default function ContactPage() {
       <section className="distress-protocol-section" id="report-distress">
         <div className="container">
           <div className="protocol-card">
-            <div className="protocol-badge">
-              <AlertTriangle size={18} color="#BE123C" />
-              <span>Emergency Animal Distress Guidelines (Bengaluru)</span>
-            </div>
-
             <h2 className="heading-display protocol-title">
               What to Do If You Find an Injured or Sick Animal
             </h2>

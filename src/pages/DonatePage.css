@@ -308,3 +308,25 @@
     display: flex;
   }
 }
+
+@media (max-width: 600px) {
+  .vault-payment-card {
+    padding: 24px 18px;
+    border-radius: var(--radius-lg);
+  }
+  .custom-amt-card {
+    padding: 16px 18px;
+  }
+  .allocation-card {
+    padding: 24px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .table-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+

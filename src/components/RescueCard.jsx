@@ -5,31 +5,34 @@ import './RescueCard.css';
 
 export default function RescueCard({ rescue, onSupport }) {
   const isRecovered = rescue.statusCode === 'recovered';
+  const displayName = rescue.animalName || rescue.name || 'Rescued Friend';
+  const displayBreed = rescue.species || rescue.breed || 'Indie';
+
+  const formatRescueDate = (dateVal) => {
+    if (!dateVal) return 'Verified Rescue';
+    if (/^\d{4}$/.test(dateVal)) return dateVal;
+    const d = new Date(dateVal);
+    return isNaN(d.getTime()) ? dateVal : d.toLocaleDateString('en-IN', { month: 'short', year: 'numeric' });
+  };
 
   return (
     <article className="rescue-card card-hover">
       <div className="rescue-card-media">
         <img 
           src={rescue.heroImage || rescue.recoveryImage} 
-          alt={`${rescue.name} - ${rescue.breed}`}
+          alt={`${displayName} - ${displayBreed}`}
           className="rescue-card-img"
           loading="lazy"
         />
-        <div className="rescue-media-overlay">
-          <span className={`status-pill ${isRecovered ? 'recovered' : 'active'}`}>
-            <span className="status-pill-dot" />
-            {rescue.statusBadge}
-          </span>
-        </div>
       </div>
 
       <div className="rescue-card-content">
         <div className="rescue-meta-row">
-          <span className="rescue-date-badge">
+          <span className="rescue-date-text">
             <Calendar size={13} />
-            Rescue: {new Date(rescue.rescueDate).toLocaleDateString('en-IN', { month: 'short', year: 'numeric' })}
+            Rescue: {formatRescueDate(rescue.rescueDate)}
           </span>
-          <span className="rescue-loc-badge">
+          <span className="rescue-loc-text">
             <MapPin size={13} />
             {rescue.location}
           </span>
@@ -37,7 +40,7 @@ export default function RescueCard({ rescue, onSupport }) {
 
         <h3 className="rescue-card-title">
           <Link to={`/rescues/${rescue.id}`}>
-            {rescue.name}: {rescue.title}
+            {displayName}: {rescue.title}
           </Link>
         </h3>
 
@@ -58,7 +61,7 @@ export default function RescueCard({ rescue, onSupport }) {
             type="button" 
             onClick={() => onSupport && onSupport(rescue)}
             className="btn btn-secondary btn-sm btn-support-card"
-            title={`Support ${rescue.name}`}
+            title={`Support ${displayName}`}
           >
             <Heart size={14} color="#BE123C" />
             <span>Support</span>

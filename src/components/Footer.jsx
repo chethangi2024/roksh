@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Mail, MapPin, ShieldCheck, Copy, Check } from 'lucide-react';
+import { Heart, Mail, MapPin, Copy, Check } from 'lucide-react';
 import { InstagramIcon, FacebookIcon, YoutubeIcon } from './SocialIcons';
 import { useToast } from '../context/ToastContext';
 import siteContent from '../data/siteContent.json';
@@ -78,6 +78,7 @@ export default function Footer({ onOpenDonate }) {
             <li><Link to="/our-work">Our 4 Pillars</Link></li>
             <li><Link to="/rescues">Latest Rescues Archive</Link></li>
             <li><Link to="/feeding">Feeding Programme</Link></li>
+            <li><Link to="/adopt">Adopt a Dog</Link></li>
             <li><Link to="/get-involved">Volunteer & Foster</Link></li>
             <li><Link to="/donate">Donate & Transparency</Link></li>
           </ul>
@@ -148,10 +149,6 @@ export default function Footer({ onOpenDonate }) {
             &copy; {new Date().getFullYear()} Roksh Samsthe Foundation. All rights reserved.
           </p>
           <div className="footer-legal-links">
-            <span className="authenticity-badge">
-              <ShieldCheck size={14} color="#15803D" />
-              100% Genuine Photographic Evidence
-            </span>
             <Link to="/privacy-policy">Privacy Policy</Link>
             <Link to="/terms">Donation Terms</Link>
           </div>

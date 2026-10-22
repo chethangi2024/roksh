@@ -1,0 +1,147 @@
+/* AdoptionCard.css — Responsive poster card preserving aspect ratio */
+
+.adoption-poster-card {
+  background: #FFFFFF;
+  border-radius: 1rem;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.adoption-poster-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 24px -4px rgba(0, 0, 0, 0.1), 0 6px 10px -4px rgba(0, 0, 0, 0.05);
+  border-color: #CBD5E1;
+}
+
+/* Poster Media Box with Aspect Ratio preservation */
+.poster-media-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 0.70;
+  background-color: #0F172A;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.poster-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.35s ease;
+  display: block;
+}
+
+.poster-media-box:hover .poster-card-img {
+  transform: scale(1.03);
+}
+
+.poster-media-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.7) 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.poster-media-box:hover .poster-media-overlay {
+  opacity: 1;
+  background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.75) 100%);
+}
+
+.poster-enlarge-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(255, 255, 255, 0.95);
+  color: #0F172A;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.4rem 0.75rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transform: translateY(0);
+  transition: transform 0.2s ease;
+}
+
+.poster-media-box:hover .poster-enlarge-badge {
+  transform: translateY(-2px);
+  background: #BE123C;
+  color: #FFFFFF;
+}
+
+/* Card Content */
+.adoption-card-content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.5rem;
+  background: #FFFFFF;
+}
+
+.adoption-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.adoption-dog-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0;
+}
+
+.adoption-meta-strip {
+  font-size: 0.85rem;
+  color: #64748B;
+  font-weight: 500;
+}
+
+.adoption-health-text {
+  font-size: 0.825rem;
+  color: #15803D;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.adoption-quote-text {
+  font-size: 0.825rem;
+  line-height: 1.45;
+  color: #64748B;
+  font-style: italic;
+  margin: 0.25rem 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.adoption-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 1px solid #F1F5F9;
+  flex-wrap: wrap;
+}
+
+.flex-1 {
+  flex: 1;
+  min-width: 100px;
+}
+

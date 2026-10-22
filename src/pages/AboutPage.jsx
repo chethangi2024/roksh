@@ -10,7 +10,6 @@ export default function AboutPage({ onOpenDonate }) {
       {/* Page Header */}
       <section className="page-hero">
         <div className="container">
-          <span className="section-eyebrow">Who We Are</span>
           <h1 className="page-hero-title heading-display">
             A Movement of Compassion, Action & Lasting Change
           </h1>
@@ -60,8 +59,7 @@ export default function AboutPage({ onOpenDonate }) {
             <div className="vm-icon-bubble">
               <Eye size={28} color="#D97706" />
             </div>
-            <span className="vm-tag">Our Vision</span>
-            <h3 className="vm-title heading-display">Safe, Loved & Treated with Dignity</h3>
+            <h3 className="vm-title heading-display">Our Vision: Safe, Loved & Treated with Dignity</h3>
             <p className="vm-body">
               {siteContent.vision}
             </p>
@@ -71,8 +69,7 @@ export default function AboutPage({ onOpenDonate }) {
             <div className="vm-icon-bubble">
               <Target size={28} color="#15803D" />
             </div>
-            <span className="vm-tag">Our Mission</span>
-            <h3 className="vm-title heading-display">Rescue, Treat, Protect & Rehome</h3>
+            <h3 className="vm-title heading-display">Our Mission: Rescue, Treat, Protect & Rehome</h3>
             <p className="vm-body">
               {siteContent.mission}
             </p>
@@ -84,8 +81,7 @@ export default function AboutPage({ onOpenDonate }) {
       <section className="principles-section">
         <div className="container">
           <div className="section-header">
-            <span className="section-eyebrow">Our Guiding Ethos</span>
-            <h2 className="section-title">Strict Standards of Animal Welfare</h2>
+            <h2 className="section-title">Standards of Animal Welfare</h2>
             <p className="section-description">
               How we safeguard the welfare, dignity, and recovery of every animal in our care.
             </p>

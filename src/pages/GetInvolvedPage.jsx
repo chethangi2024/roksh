@@ -31,7 +31,6 @@ export default function GetInvolvedPage({ onOpenDonate }) {
       {/* Header */}
       <section className="page-hero">
         <div className="container">
-          <span className="section-eyebrow">Get Involved</span>
           <h1 className="page-hero-title heading-display">
             Join the Compassion Network in Bengaluru
           </h1>
@@ -96,7 +95,6 @@ export default function GetInvolvedPage({ onOpenDonate }) {
         <div className="container">
           <div className="volunteer-form-wrapper glass-panel">
             <div className="form-header text-center">
-              <span className="section-eyebrow">Volunteer Application</span>
               <h2 className="heading-display form-heading">
                 Step Forward for Bengaluru's Animals
               </h2>

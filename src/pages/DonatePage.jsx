@@ -60,7 +60,6 @@ export default function DonatePage() {
       {/* Header */}
       <section className="page-hero">
         <div className="container">
-          <span className="section-eyebrow">Financial Support</span>
           <h1 className="page-hero-title heading-display">
             Direct & Transparent Animal Welfare Support
           </h1>
@@ -91,7 +90,7 @@ export default function DonatePage() {
                 >
                   <div className="tier-header-row">
                     <span className="tier-amount-val">₹{tier.amount.toLocaleString('en-IN')}</span>
-                    <span className="tier-tag-pill">{tier.tag}</span>
+                    <span className="tier-tag-text">{tier.tag}</span>
                   </div>
                   <h3 className="tier-title">{tier.title}</h3>
                   <p className="tier-desc">{tier.desc}</p>
@@ -198,7 +197,6 @@ export default function DonatePage() {
       <section className="fund-allocation-section">
         <div className="container">
           <div className="section-header">
-            <span className="section-eyebrow">Financial Integrity</span>
             <h2 className="section-title">Where Every Rupee Is Directed</h2>
             <p className="section-description">
               We operate leanly with zero corporate luxury. Funds are mobilized straight to clinical invoices and food ingredients.

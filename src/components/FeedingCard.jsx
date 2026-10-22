@@ -12,12 +12,6 @@ export default function FeedingCard({ drive, onSponsor }) {
           className="feeding-card-img"
           loading="lazy"
         />
-        <div className="feeding-badge-overlay">
-          <span className="feeding-meals-pill">
-            <Utensils size={13} />
-            {drive.mealsServed}
-          </span>
-        </div>
       </div>
 
       <div className="feeding-card-body">
@@ -29,6 +23,10 @@ export default function FeedingCard({ drive, onSponsor }) {
           <span className="feeding-meta-item">
             <MapPin size={13} />
             {drive.location}
+          </span>
+          <span className="feeding-meta-item">
+            <Utensils size={13} />
+            {drive.mealsServed}
           </span>
         </div>
 

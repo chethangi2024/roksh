@@ -1,0 +1,147 @@
+/* ==========================================================================
+   DISTRESS BANNER (EMERGENCY TOP ANNOUNCEMENT BAR)
+   ========================================================================== */
+
+.distress-alert-banner {
+  background: linear-gradient(90deg, #161719 0%, #201314 100%);
+  color: #FFF;
+  border-bottom: 1px solid rgba(239, 68, 68, 0.25);
+  position: relative;
+  z-index: 101;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  padding: 8px 0;
+}
+
+.distress-banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.distress-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.distress-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.distress-text {
+  color: #F3F4F6;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+
+.distress-lead {
+  color: #E5E7EB;
+  font-weight: 500;
+}
+
+.distress-links-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.distress-link-protocol {
+  color: #FCA5A5;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+
+.distress-link-protocol:hover {
+  color: #FFF;
+}
+
+.distress-sep {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.8em;
+}
+
+.distress-link-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #86EFAC;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+
+.distress-link-whatsapp:hover {
+  color: #BBF7D0;
+}
+
+/* Tablet & Mobile responsive styles */
+@media (max-width: 768px) {
+  .distress-alert-banner {
+    padding: 7px 0;
+    font-size: 0.78rem;
+    line-height: 1.38;
+  }
+  
+  .distress-banner-inner {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 540px) {
+  .distress-alert-banner {
+    padding: 6px 0;
+    font-size: 0.74rem;
+  }
+
+  .distress-banner-inner {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .distress-icon {
+    padding-top: 2px;
+  }
+
+  .distress-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    text-align: left;
+  }
+
+  .distress-lead {
+    line-height: 1.3;
+  }
+
+  .distress-links-wrap {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex-wrap: wrap;
+    padding-top: 1px;
+  }
+}
+
+@media (max-width: 340px) {
+  .distress-alert-banner {
+    font-size: 0.7rem;
+  }
+}

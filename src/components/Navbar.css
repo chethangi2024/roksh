@@ -1,72 +1,111 @@
+/* ==========================================================================
+   NAVBAR & HEADER STYLES (Single properly aligned flex row)
+   ========================================================================== */
+
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(250, 248, 245, 0.92);
+  background: rgba(250, 248, 245, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-light);
-  transition: all var(--transition-normal);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   height: var(--header-height);
   display: flex;
   align-items: center;
 }
 
 .site-header.scrolled {
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(255, 255, 255, 0.98);
   box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.06);
   border-bottom-color: rgba(0, 0, 0, 0.08);
 }
 
+/* Header Container as a flexible, aligned row */
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
 }
 
-.brand-logo-link {
+/* 1. Logo (Fixed Left) */
+.header-logo-link {
   display: flex;
   align-items: center;
-  gap: 12px;
+  flex-shrink: 0;
   text-decoration: none;
 }
 
-.brand-logo-img {
-  width: 50px;
-  height: 50px;
+.header-logo-img {
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border: 1.5px solid var(--primary-amber);
+  flex-shrink: 0;
+  display: block;
 }
 
-.brand-titles {
+/* 2. Organisation Name (Flexible Middle) */
+.header-org-container {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  flex: 0 1 auto; /* On desktop, sized to fit name; on mobile, takes available space */
+  overflow: hidden;
+}
+
+.header-org-link {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  overflow: hidden;
+  text-decoration: none;
 }
 
-.brand-name {
+.header-org-name {
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 1.15rem;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
   color: var(--text-main);
-  line-height: 1.1;
+  line-height: 1.15;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
 }
 
-.brand-tagline {
+.header-org-tagline {
   font-size: 0.72rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   color: var(--primary-amber-dark);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  margin-top: 1px;
 }
 
-/* Desktop Nav */
+.tagline-sep {
+  opacity: 0.6;
+  padding: 0 3px;
+}
+
+/* Desktop Navigation */
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 22px;
+  margin-left: auto; /* Pushes desktop nav to the right alongside actions */
+  margin-right: 8px;
 }
 
 .nav-link {
@@ -77,6 +116,7 @@
   position: relative;
   padding: 6px 0;
   transition: color var(--transition-fast);
+  white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -98,15 +138,38 @@
   border-radius: var(--radius-full);
 }
 
-/* Actions */
+/* 3. Action Controls (Fixed Right) */
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
+  flex-shrink: 0;
 }
 
 .donate-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  background: linear-gradient(135deg, var(--primary-amber) 0%, var(--primary-amber-hover) 100%);
+  color: #121316;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 8px 18px;
+  height: 40px;
+  border-radius: var(--radius-full);
   box-shadow: 0 4px 12px rgba(245, 166, 35, 0.28);
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: all var(--transition-normal);
+}
+
+.donate-cta-btn:hover {
+  background: linear-gradient(135deg, #FFB338 0%, var(--primary-amber) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(245, 166, 35, 0.38);
 }
 
 .mobile-toggle-btn {
@@ -115,9 +178,18 @@
   justify-content: center;
   width: 42px;
   height: 42px;
+  min-width: 42px;
   border-radius: var(--radius-md);
   color: var(--text-main);
   background-color: var(--surface-subtle);
+  border: 1px solid var(--border-light);
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.mobile-toggle-btn:hover {
+  background-color: #EAE5DC;
 }
 
 /* Mobile Nav Drawer */
@@ -127,12 +199,13 @@
   left: 0;
   width: 100%;
   height: calc(100vh - var(--header-height));
+  height: calc(100dvh - var(--header-height));
   background-color: var(--surface-card);
   z-index: 99;
   transform: translateY(-100%);
   opacity: 0;
   visibility: hidden;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, visibility 0.3s;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, visibility 0.28s;
   overflow-y: auto;
   border-top: 1px solid var(--border-light);
 }
@@ -144,26 +217,76 @@
 }
 
 .mobile-nav-inner {
-  padding: 24px 20px 40px;
+  padding: 20px 20px 36px;
   display: flex;
   flex-direction: column;
   min-height: 100%;
   justify-content: space-between;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.mobile-drawer-header {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.drawer-brand-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.drawer-brand-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--primary-amber);
+  flex-shrink: 0;
+}
+
+.drawer-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.drawer-brand-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.drawer-brand-tagline {
+  font-size: 0.76rem;
+  color: var(--primary-amber-dark);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .mobile-nav-links {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
 .mobile-nav-link {
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 1.08rem;
   font-weight: 700;
   color: var(--text-main);
   padding: 10px 0;
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: color var(--transition-fast), padding-left var(--transition-fast);
+}
+
+.mobile-nav-link:hover {
+  color: var(--primary-amber-dark);
+  padding-left: 4px;
 }
 
 .mobile-nav-link.active {
@@ -171,14 +294,10 @@
 }
 
 .mobile-drawer-footer {
-  margin-top: 32px;
+  margin-top: 28px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-}
-
-.w-full {
-  width: 100%;
+  gap: 12px;
 }
 
 .mobile-trust-note {
@@ -191,11 +310,153 @@
   text-align: center;
 }
 
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS: TABLET & MOBILE
+   ========================================================================== */
+
+/* 1. Tablet & Mobile Base (< 900px) */
 @media (max-width: 900px) {
   .desktop-nav {
     display: none;
   }
+
   .mobile-toggle-btn {
     display: flex;
+  }
+
+  /* Three distinct elements in a row */
+  .header-container {
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .header-org-container {
+    flex: 1 1 auto; /* Flexible middle taking only available space */
+    min-width: 0;
+  }
+
+  .header-actions {
+    margin-left: auto; /* Anchors actions securely to the right */
+  }
+}
+
+/* 2. Mobile Standard (<= 640px) */
+@media (max-width: 640px) {
+  .header-container {
+    padding-left: 12px;
+    padding-right: 12px;
+    gap: 8px;
+  }
+
+  .header-logo-img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .header-org-name {
+    font-size: 1rem;
+    letter-spacing: -0.01em;
+  }
+
+  /* Hide tagline/location to keep mobile header clean and prevent vertical wrapping */
+  .header-org-tagline {
+    display: none;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+
+  .donate-cta-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    gap: 5px;
+    height: 36px;
+  }
+
+  .donate-cta-btn svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .mobile-toggle-btn {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+  }
+}
+
+/* 3. Small Mobile (<= 375px) */
+@media (max-width: 375px) {
+  .header-container {
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 7px;
+  }
+
+  .header-logo-img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .header-org-name {
+    font-size: 0.94rem;
+  }
+
+  .header-actions {
+    gap: 6px;
+  }
+
+  .donate-cta-btn {
+    padding: 5px 10px;
+    font-size: 0.78rem;
+    height: 34px;
+    gap: 4px;
+  }
+
+  .mobile-toggle-btn {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+  }
+}
+
+/* 4. Ultra-narrow Mobile (<= 330px, e.g. 320px) */
+@media (max-width: 330px) {
+  .header-container {
+    padding-left: 8px;
+    padding-right: 8px;
+    gap: 6px;
+  }
+
+  .header-logo-img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .header-org-name {
+    font-size: 0.86rem;
+  }
+
+  .header-actions {
+    gap: 5px;
+  }
+
+  .donate-cta-btn {
+    padding: 5px 8px;
+    font-size: 0.74rem;
+    height: 32px;
+    gap: 3px;
+  }
+
+  .donate-cta-btn svg {
+    width: 11px;
+    height: 11px;
+  }
+
+  .mobile-toggle-btn {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
   }
 }

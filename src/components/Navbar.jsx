@@ -14,6 +14,17 @@ export default function Navbar({ onOpenDonate }) {
   }, [location.pathname]);
 
   useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
+  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
@@ -24,19 +35,28 @@ export default function Navbar({ onOpenDonate }) {
   return (
     <header className={`site-header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container header-container">
-        <Link to="/" className="brand-logo-link" aria-label="Roksh Samsthe Foundation Home">
+        {/* 1. Logo: Fixed Left */}
+        <Link to="/" className="header-logo-link" onClick={() => setIsMobileMenuOpen(false)} aria-label="Roksh Samsthe Foundation Home">
           <img 
             src="/assets/logo.png" 
             alt="Roksh Samsthe Foundation Logo" 
-            className="brand-logo-img" 
-            width="52" 
-            height="52" 
+            className="header-logo-img" 
+            width="42" 
+            height="42" 
           />
-          <div className="brand-titles">
-            <span className="brand-name">Roksh Samsthe</span>
-            <span className="brand-tagline">Foundation • Bengaluru</span>
-          </div>
         </Link>
+
+        {/* 2. Organisation Name: Flexible Middle */}
+        <div className="header-org-container">
+          <Link to="/" className="header-org-link" onClick={() => setIsMobileMenuOpen(false)}>
+            <span className="header-org-name">Roksh Samsthe</span>
+            <span className="header-org-tagline">
+              <span className="tagline-foundation">Foundation</span>
+              <span className="tagline-sep"> · </span>
+              <span className="tagline-loc">Bengaluru</span>
+            </span>
+          </Link>
+        </div>
 
         {/* Desktop Navigation */}
         <nav className="desktop-nav" aria-label="Main Navigation">
@@ -55,6 +75,9 @@ export default function Navbar({ onOpenDonate }) {
           <NavLink to="/feeding" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
             Feeding
           </NavLink>
+          <NavLink to="/adopt" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+            Adopt
+          </NavLink>
           <NavLink to="/get-involved" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
             Get Involved
           </NavLink>
@@ -68,11 +91,11 @@ export default function Navbar({ onOpenDonate }) {
           <button 
             type="button" 
             onClick={onOpenDonate}
-            className="btn btn-primary btn-sm donate-cta-btn"
+            className="btn btn-primary donate-cta-btn"
             id="header-donate-btn"
             aria-label="Open donation options"
           >
-            <Heart size={16} fill="currentColor" strokeWidth={0} />
+            <Heart size={14} fill="currentColor" strokeWidth={0} />
             <span>Donate</span>
           </button>
 
@@ -83,7 +106,7 @@ export default function Navbar({ onOpenDonate }) {
             aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMobileMenuOpen}
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </div>
@@ -91,29 +114,48 @@ export default function Navbar({ onOpenDonate }) {
       {/* Mobile Drawer Navigation */}
       <div className={`mobile-nav-drawer ${isMobileMenuOpen ? 'open' : ''}`} aria-hidden={!isMobileMenuOpen}>
         <div className="mobile-nav-inner">
+          <div className="mobile-drawer-header">
+            <div className="drawer-brand-card">
+              <img 
+                src="/assets/logo.png" 
+                alt="Roksh Samsthe Logo" 
+                width="38" 
+                height="38" 
+                className="drawer-brand-img" 
+              />
+              <div className="drawer-brand-text">
+                <span className="drawer-brand-title">Roksh Samsthe Foundation</span>
+                <span className="drawer-brand-tagline">Animal Welfare • Bengaluru</span>
+              </div>
+            </div>
+          </div>
+
           <nav className="mobile-nav-links">
-            <NavLink to="/" end className="mobile-nav-link">
+            <NavLink to="/" end className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
               Home
             </NavLink>
-            <NavLink to="/about" className="mobile-nav-link">
+            <NavLink to="/about" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
               About Roksh
             </NavLink>
-            <NavLink to="/our-work" className="mobile-nav-link">
+            <NavLink to="/our-work" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
               Our 4 Pillars of Work
             </NavLink>
-            <NavLink to="/rescues" className="mobile-nav-link">
+            <NavLink to="/rescues" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
               Latest Rescues Archive
             </NavLink>
-            <NavLink to="/feeding" className="mobile-nav-link">
+            <NavLink to="/feeding" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
               Feeding Programme
             </NavLink>
-            <NavLink to="/get-involved" className="mobile-nav-link">
+            <NavLink to="/adopt" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
+              Adopt a Dog
+            </NavLink>
+            <NavLink to="/get-involved" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
               Get Involved & Volunteer
             </NavLink>
-            <NavLink to="/contact" className="mobile-nav-link">
+            <NavLink to="/contact" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
               Contact & Distress Reporting
             </NavLink>
-            <NavLink to="/donate" className="mobile-nav-link text-gold font-bold">
+            <NavLink to="/donate" className="mobile-nav-link text-gold font-bold" onClick={() => setIsMobileMenuOpen(false)}>
               Donate & Transparency Vault
             </NavLink>
           </nav>

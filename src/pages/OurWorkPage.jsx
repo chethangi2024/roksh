@@ -9,7 +9,6 @@ export default function OurWorkPage({ onOpenDonate }) {
       {/* Header */}
       <section className="page-hero">
         <div className="container">
-          <span className="section-eyebrow">Operational Methodology</span>
           <h1 className="page-hero-title heading-display">
             Our 4 Pillars of Animal Welfare
           </h1>
@@ -23,9 +22,8 @@ export default function OurWorkPage({ onOpenDonate }) {
       <section className="pillar-detail-section" id="emergency-rescue">
         <div className="container pillar-detail-grid">
           <div className="pillar-text-content">
-            <span className="pillar-badge-num">Pillar 01</span>
             <h2 className="pillar-heading heading-display">
-              Emergency Street Rescue & Clinical Triage
+              1. Emergency Street Rescue & Clinical Triage
             </h2>
             <p className="pillar-summary">
               Responding to animals facing acute trauma, abandonment, hit-and-run accidents, and life-threatening infections across Bengaluru.
@@ -79,12 +77,12 @@ export default function OurWorkPage({ onOpenDonate }) {
       </section>
 
       {/* Pillar 2: Veterinary Care & Oncology */}
+      {/* Pillar 2: Veterinary Care & Oncology */}
       <section className="pillar-detail-section alt-bg" id="veterinary-care">
         <div className="container pillar-detail-grid reverse">
           <div className="pillar-text-content">
-            <span className="pillar-badge-num">Pillar 02</span>
             <h2 className="pillar-heading heading-display">
-              Veterinary Care & TVT Chemotherapy
+              2. Veterinary Care & TVT Chemotherapy
             </h2>
             <p className="pillar-summary">
               Comprehensive clinical treatments for severe conditions often neglected or euthanized by others.
@@ -110,7 +108,7 @@ export default function OurWorkPage({ onOpenDonate }) {
               </div>
             </div>
             <div className="pillar-action-row">
-              <Link to="/rescues/sapna-tvt-recovery" className="btn btn-secondary btn-sm">
+              <Link to="/rescues/rescue-sapna-tvt" className="btn btn-secondary btn-sm">
                 <span>See Sapna's Chemo Case</span>
                 <ArrowRight size={14} />
               </Link>
@@ -141,9 +139,8 @@ export default function OurWorkPage({ onOpenDonate }) {
       <section className="pillar-detail-section" id="feeding-drives">
         <div className="container pillar-detail-grid">
           <div className="pillar-text-content">
-            <span className="pillar-badge-num">Pillar 03</span>
             <h2 className="pillar-heading heading-display">
-              Daily Sustenance & Community Feeding Drives
+              3. Daily Sustenance & Community Feeding Drives
             </h2>
             <p className="pillar-summary">
               Consistent, high-protein cooked nutrition delivered to street dog packs across industrial and desolate stretches of Bengaluru.
@@ -200,9 +197,8 @@ export default function OurWorkPage({ onOpenDonate }) {
       <section className="pillar-detail-section alt-bg" id="lifelong-boarding">
         <div className="container pillar-detail-grid reverse">
           <div className="pillar-text-content">
-            <span className="pillar-badge-num">Pillar 04</span>
             <h2 className="pillar-heading heading-display">
-              Lifelong Safe Boarding & Responsible Rehoming
+              4. Lifelong Safe Boarding & Responsible Rehoming
             </h2>
             <p className="pillar-summary">
               Providing safe haven and foster care for animals unable to survive on the streets, paired with thorough home checks for adoptions.

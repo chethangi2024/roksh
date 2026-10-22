@@ -18,19 +18,23 @@ import {
 import ImageComparisonSlider from '../components/ImageComparisonSlider';
 import RescueCard from '../components/RescueCard';
 import FeedingCard from '../components/FeedingCard';
+import AdoptionCard from '../components/AdoptionCard';
+import PosterModal from '../components/PosterModal';
 import { useToast } from '../context/ToastContext';
 import rescuesData from '../data/rescues.json';
 import feedingData from '../data/feeding.json';
 import siteContent from '../data/siteContent.json';
+import { adoptionDogs } from '../data/adoption';
 import './HomePage.css';
 
 export default function HomePage({ onOpenDonate }) {
   const { showToast } = useToast();
   const [copied, setCopied] = React.useState(false);
+  const [selectedPosterDog, setSelectedPosterDog] = React.useState(null);
 
   // Latest rescue record (Sapna)
   const latestRescue = rescuesData.find((r) => r.isLatest) || rescuesData[0];
-  // Other featured rescues (Siddu, Chinna, Puppies)
+  // Other featured rescues (Siddu, Chinna, Lilly, Idli)
   const otherRescues = rescuesData.filter((r) => r.id !== latestRescue.id);
 
   const handleCopyUpi = () => {
@@ -48,11 +52,6 @@ export default function HomePage({ onOpenDonate }) {
       <section className="hero-section" aria-label="Hero Introduction">
         <div className="container hero-container">
           <div className="hero-content">
-            <div className="hero-eyebrow-badge">
-              <span className="live-dot" />
-              <span>Verified Animal Welfare Initiative • Bengaluru</span>
-            </div>
-
             <h1 className="hero-heading heading-display">
               Every Voiceless Life Deserves <span className="text-gold">Healing, Dignity</span> & a Second Chance.
             </h1>
@@ -78,19 +77,19 @@ export default function HomePage({ onOpenDonate }) {
               </Link>
             </div>
 
-            {/* Verified Trust Strip */}
+            {/* Trust Strip */}
             <div className="hero-trust-strip">
               <div className="trust-item">
                 <ShieldCheck size={18} color="#15803D" />
-                <span>100% Authentic Photos Only</span>
+                <span>Original Case Photography</span>
               </div>
               <div className="trust-item">
                 <CheckCircle2 size={18} color="#15803D" />
-                <span>Direct IDFC First Bank / UPI</span>
+                <span>Direct Bank / UPI Transfer</span>
               </div>
               <div className="trust-item">
                 <Activity size={18} color="#15803D" />
-                <span>Verified Veterinary Progress</span>
+                <span>Clinical Veterinary Care</span>
               </div>
             </div>
           </div>
@@ -102,14 +101,10 @@ export default function HomePage({ onOpenDonate }) {
                 alt="Sapna, a rescued Labrador smiling radiantly in her harness during recovery under Roksh care" 
                 className="hero-primary-photo"
               />
-              <div className="hero-floating-badge">
-                <span className="status-pill active">
-                  <span className="status-pill-dot" />
-                  Latest Rescue Update: Oct 2026
-                </span>
+              <div className="hero-caption-card">
                 <h4 className="floating-title">Sapna: TVT Chemotherapy Recovery</h4>
                 <p className="floating-sub">Rescued from street abandonment • Undergoing active cancer care</p>
-                <Link to="/rescues/sapna-tvt-recovery" className="floating-link">
+                <Link to={`/rescues/${latestRescue.id}`} className="floating-link">
                   Read Sapna's Journey &rarr;
                 </Link>
               </div>
@@ -120,22 +115,10 @@ export default function HomePage({ onOpenDonate }) {
 
       {/* =========================================================================
           SECTION 2: SIGNATURE FEATURE — LATEST RESCUES & FIELD UPDATES
-          (Directly below Hero as strictly specified by PRD Section 7.2)
           ========================================================================= */}
       <section className="latest-rescue-feature-section" id="latest-rescue">
         <div className="container">
           <div className="latest-rescue-header">
-            <div className="latest-tag-wrapper">
-              <span className="latest-pulse-badge">
-                <span className="pulse-ping" />
-                <span className="pulse-core" />
-                LATEST FIELD RESCUE • OCTOBER 2026
-              </span>
-              <span className="verification-label">
-                <ShieldCheck size={14} color="#15803D" />
-                Verified Clinical Record
-              </span>
-            </div>
             <h2 className="latest-rescue-title heading-display">
               {latestRescue.title}
             </h2>
@@ -178,10 +161,6 @@ export default function HomePage({ onOpenDonate }) {
             {/* Split Right: Story & Clinical Verification */}
             <div className="latest-card-details">
               <div className="latest-status-strip">
-                <span className="status-pill active">
-                  <span className="status-pill-dot" />
-                  Status: {latestRescue.statusBadge}
-                </span>
                 <span className="rescue-loc-tag">
                   <MapPin size={14} />
                   {latestRescue.location}
@@ -239,12 +218,10 @@ export default function HomePage({ onOpenDonate }) {
 
       {/* =========================================================================
           SECTION 3: VERIFIED IMPACT & TRANSPARENCY METRICS
-          (PRD: Only verified figures, no exaggerated marketing claims)
           ========================================================================= */}
       <section className="impact-section">
         <div className="container">
           <div className="section-header">
-            <span className="section-eyebrow">Our Ground Realities</span>
             <h2 className="section-title">Measurable Care, Zero Exaggeration</h2>
             <p className="section-description">
               We believe genuine animal welfare is built on transparent ground evidence. Here is how Roksh Samsthe Foundation serves Bengaluru's animals every single day.
@@ -269,7 +246,6 @@ export default function HomePage({ onOpenDonate }) {
       <section className="pillars-section">
         <div className="container">
           <div className="section-header">
-            <span className="section-eyebrow">Pillars of Service</span>
             <h2 className="section-title">Our Work in Action</h2>
             <p className="section-description">
               A comprehensive approach to animal welfare: from the moment of emergency distress call to lifelong recovery and nourishment.
@@ -302,10 +278,9 @@ export default function HomePage({ onOpenDonate }) {
       <section className="transformations-section">
         <div className="container">
           <div className="section-header">
-            <span className="section-eyebrow">Documentary Proof</span>
             <h2 className="section-title">The Power of Timely Intervention</h2>
             <p className="section-description">
-              Drag the interactive slider below to witness how medical care and nutrition completely transformed Siddu from severe mange to joyful boarding.
+              Witness how medical care and nutrition completely transformed Siddu from severe mange to joyful boarding.
             </p>
           </div>
 
@@ -321,23 +296,19 @@ export default function HomePage({ onOpenDonate }) {
             </div>
 
             <div className="transformation-info-box">
-              <span className="status-pill recovered">
-                <span className="status-pill-dot" />
-                Status: Recovered & In Safe Boarding
-              </span>
               <h3 className="trans-title heading-editorial">
                 Siddu’s Journey: From Raw Pain to Bandana Smiles
               </h3>
               <p className="trans-desc">
                 Rescued hairless, emaciated, and suffering from acute generalized mange. Through intensive medicated dips, wound dressings, and love, his coat returned completely. Today he stays at a peaceful boarding facility.
               </p>
-              <div className="trans-meta-badges">
+              <div className="trans-meta-list">
                 <span><strong>Breed:</strong> Indie Male</span>
                 <span><strong>Treatment:</strong> Medicated skin baths & anti-parasitic course</span>
                 <span><strong>Current Home:</strong> Long-term boarding facility</span>
               </div>
               <div className="trans-actions">
-                <Link to="/rescues/siddu-mange-recovery" className="btn btn-secondary btn-sm">
+                <Link to="/rescues/rescue-siddu-mange" className="btn btn-secondary btn-sm">
                   <span>Read Siddu's Full Story</span>
                   <ArrowRight size={14} />
                 </Link>
@@ -357,7 +328,7 @@ export default function HomePage({ onOpenDonate }) {
           <div className="other-rescues-header">
             <h3 className="heading-display text-xl font-bold">More Rescued Lives</h3>
             <Link to="/rescues" className="view-all-link">
-              <span>View All Verified Stories ({rescuesData.length})</span>
+              <span>View All Stories ({rescuesData.length})</span>
               <ArrowRight size={14} />
             </Link>
           </div>
@@ -367,7 +338,7 @@ export default function HomePage({ onOpenDonate }) {
               <RescueCard 
                 key={rescue.id} 
                 rescue={rescue} 
-                onSupport={(r) => onOpenDonate(r.id === 'siddu-mange-recovery' ? 5000 : 1500)} 
+                onSupport={(r) => onOpenDonate(r.id === 'rescue-siddu-mange' ? 5000 : 3500)} 
               />
             ))}
           </div>
@@ -381,10 +352,6 @@ export default function HomePage({ onOpenDonate }) {
         <div className="container">
           <div className="feeding-spotlight-banner">
             <div className="feeding-spotlight-content">
-              <span className="feeding-spotlight-tag">
-                <Utensils size={14} />
-                Daily Sustenance Initiative
-              </span>
               <h2 className="feeding-spotlight-title heading-display">
                 Nourishing Hundreds of Voiceless Lives Across Bengaluru
               </h2>
@@ -431,10 +398,49 @@ export default function HomePage({ onOpenDonate }) {
                   className="feeding-cauldron-img" 
                 />
                 <div className="feeding-media-caption">
-                  <span>Authentic Field Photograph: Cauldron meal dispatch</span>
+                  <span>Cauldron meal dispatch during feeding drive</span>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================================
+          SECTION 7: MEET THE DOGS (ADOPTION SHOWCASE)
+          ========================================================================= */}
+      <section className="home-adoption-section" aria-label="Adoption Showcase">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title">Meet Dogs Up For Adoption</h2>
+            <p className="section-description">
+              Rescued from trauma, nurtured back to vibrant health, and eager to give a lifetime of unconditional love. Every dog below has verified health status and is waiting for a compassionate Bengaluru family.
+            </p>
+          </div>
+
+          <div className="home-adoption-grid">
+            {adoptionDogs
+              .filter((d) => ['adopt-bittu', 'adopt-siddu', 'adopt-snowy', 'adopt-lucy'].includes(d.id))
+              .map((dog) => (
+                <AdoptionCard 
+                  key={dog.id} 
+                  dog={dog} 
+                  onSelect={(d) => setSelectedPosterDog(d)} 
+                />
+              ))}
+          </div>
+
+          <div className="home-adoption-footer-banner">
+            <div className="home-adoption-footer-info">
+              <h3 className="home-adoption-footer-title">Looking for a specific age, companion or temperament?</h3>
+              <p className="home-adoption-footer-text">
+                Browse our complete collection of {adoptionDogs.length} authentic rescue posters — from 45-day indie puppies to devoted adult survivors like Siddu.
+              </p>
+            </div>
+            <Link to="/adopt" className="btn btn-primary btn-lg">
+              <span>Explore All {adoptionDogs.length} Adoption Candidates</span>
+              <ArrowRight size={18} />
+            </Link>
           </div>
         </div>
       </section>
@@ -445,7 +451,6 @@ export default function HomePage({ onOpenDonate }) {
       <section className="get-involved-section">
         <div className="container">
           <div className="section-header">
-            <span className="section-eyebrow">Join the Movement</span>
             <h2 className="section-title">Three Powerful Ways to Help Today</h2>
             <p className="section-description">
               Whether through financial support, donating supplies, or giving your time on the ground, your compassion directly saves lives.
@@ -515,10 +520,6 @@ export default function HomePage({ onOpenDonate }) {
         <div className="container">
           <div className="bank-vault-box glass-panel">
             <div className="vault-content">
-              <span className="vault-tag">
-                <ShieldCheck size={14} color="#15803D" />
-                Verified Non-Profit Banking
-              </span>
               <h2 className="vault-title heading-display">
                 Direct, Transparent Financial Support
               </h2>
@@ -575,6 +576,14 @@ export default function HomePage({ onOpenDonate }) {
           </div>
         </div>
       </section>
+
+      {/* Full Resolution Adoption Poster Modal */}
+      {selectedPosterDog && (
+        <PosterModal 
+          dog={selectedPosterDog} 
+          onClose={() => setSelectedPosterDog(null)} 
+        />
+      )}
     </div>
   );
 }

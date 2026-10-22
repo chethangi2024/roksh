@@ -3,14 +3,5 @@ dist
 .DS_Store
 *.local
 Digital Assets/
-dump_docs.ps1
-check_other_media.ps1
-extract_media.ps1
-list_docx_media.ps1
-map_docx_images.ps1
-read_prd.ps1
-setup_assets.ps1
-test_p1.ps1
-prd_full.txt
-other_details.txt
-recently_rescued_dogs.txt
+*.ps1
+*.txt

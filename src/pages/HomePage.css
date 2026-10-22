@@ -42,12 +42,13 @@
 }
 
 .hero-heading {
-  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-size: clamp(1.85rem, 5.8vw, 3.5rem);
   font-weight: 800;
   color: var(--text-main);
-  line-height: 1.12;
+  line-height: 1.15;
   margin-bottom: 20px;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
 }
 
 .hero-description {
@@ -108,7 +109,7 @@
   transform: scale(1.03);
 }
 
-.hero-floating-badge {
+.hero-caption-card {
   position: absolute;
   bottom: 16px;
   left: 16px;
@@ -126,7 +127,7 @@
   font-family: var(--font-display);
   font-size: 1.1rem;
   font-weight: 700;
-  margin: 8px 0 4px;
+  margin: 0 0 4px;
 }
 
 .floating-sub {
@@ -546,7 +547,7 @@
 .trans-title {
   font-size: 1.7rem;
   color: var(--text-main);
-  margin: 14px 0 12px;
+  margin: 0 0 12px;
 }
 
 .trans-desc {
@@ -556,7 +557,7 @@
   margin-bottom: 20px;
 }
 
-.trans-meta-badges {
+.trans-meta-list {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -907,7 +908,62 @@
   margin-top: 10px;
 }
 
+/* ==========================================================================
+   Home Adoption Showcase Section
+   ========================================================================== */
+.home-adoption-section {
+  padding: 84px 0;
+  background-color: var(--surface-subtle, #F3EFE8);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.home-adoption-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.home-adoption-footer-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  background: var(--surface-card, #FFFFFF);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg, 20px);
+  padding: 32px 40px;
+  box-shadow: var(--shadow-sm);
+}
+
+.home-adoption-footer-info {
+  max-width: 650px;
+}
+
+.home-adoption-footer-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.home-adoption-footer-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
 /* Responsive Breakpoints */
+@media (max-width: 1100px) {
+  .home-adoption-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
 @media (max-width: 992px) {
   .hero-container {
     grid-template-columns: 1fr;
@@ -925,4 +981,137 @@
   .bank-vault-box {
     grid-template-columns: 1fr;
   }
+  .home-adoption-footer-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 28px;
+  }
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
 }
+
+@media (max-width: 640px) {
+  /* Mobile Hero Adjustments */
+  .hero-section {
+    padding: 24px 0 44px 0;
+  }
+
+  .hero-container {
+    gap: 28px;
+  }
+
+  .hero-heading {
+    font-size: clamp(1.75rem, 6.2vw, 2.25rem);
+    line-height: 1.18;
+    margin-bottom: 14px;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  .hero-description {
+    font-size: 0.98rem;
+    line-height: 1.55;
+    margin-bottom: 24px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 26px;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 20px;
+    font-size: 0.95rem;
+  }
+
+  .hero-trust-strip {
+    gap: 10px 16px;
+    padding-top: 18px;
+  }
+
+  .trust-item {
+    font-size: 0.78rem;
+    gap: 6px;
+  }
+
+  .hero-image-card {
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+    border-width: 3px;
+  }
+
+  .hero-caption-card {
+    padding: 14px;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+  }
+
+  .floating-title {
+    font-size: 0.98rem;
+  }
+
+  .floating-sub {
+    font-size: 0.76rem;
+    margin-bottom: 6px;
+  }
+
+  /* Section padding reductions across mobile */
+  .latest-rescue-feature-section,
+  .realities-section,
+  .pillars-section,
+  .transformations-section,
+  .home-feeding-section,
+  .bank-vault-section {
+    padding: 48px 0;
+  }
+
+  .home-adoption-section {
+    padding: 48px 0;
+  }
+
+  .home-adoption-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .home-adoption-footer-banner {
+    padding: 20px;
+  }
+
+  .home-adoption-footer-banner .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-section {
+    padding: 20px 0 36px 0;
+  }
+
+  .hero-heading {
+    font-size: 1.62rem;
+  }
+
+  .hero-description {
+    font-size: 0.92rem;
+  }
+
+  .hero-cta-group .btn {
+    padding: 11px 16px;
+    font-size: 0.88rem;
+  }
+
+  .hero-trust-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+

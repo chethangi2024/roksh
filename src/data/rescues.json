@@ -1,153 +1,306 @@
 [
   {
-    "id": "sapna-tvt-recovery",
+    "id": "rescue-sapna-tvt",
     "name": "Sapna",
-    "species": "Dog",
+    "animalName": "Sapna",
     "breed": "Labrador Retriever (Female)",
-    "age": "Adult",
-    "rescueDate": "2026-10-10",
-    "publicationDate": "2026-10-17",
+    "species": "Labrador Retriever (Female)",
+    "title": "Discarded After a Life of Breeding? Her Painful Reality and Hope for Healing",
+    "rescueDate": "October 2026",
+    "publishedDate": "2026-10-18",
     "lastUpdated": "2026-10-22",
     "location": "Bengaluru, Karnataka",
-    "status": "Under Active Treatment",
-    "statusCode": "active",
-    "statusBadge": "Undergoing Chemotherapy",
-    "diagnosis": "TVT (Transmissible Venereal Tumour) Cancer & Severe Tick Infestation",
-    "title": "Sapna's Fight Against TVT: From Abandonment to Hope",
-    "summary": "Meet Sapna, a female Labrador retriever found abandoned on the streets of Bengaluru, her body covered in ticks, bleeding and silently suffering. Discarded after a life of breeding, her chemotherapy has begun.",
-    "story": "Discarded After a Life of Breeding? Her Painful Reality.\n\nMeet Sapna, a lab retriever who was found abandoned on the streets of Bengaluru, her body covered in ticks, bleeding and silently suffering.\n\nThis beautiful female Labrador has been diagnosed with TVT (Transmissible Venereal Tumour), a form of cancer. Her condition is painful, and she now faces a difficult journey towards recovery.\n\nShe may have been discarded after being used for breeding, left behind when she needed care the most. We may never know what she has been through or how long she suffered alone.\n\nHer chemotherapy has begun. She is finally receiving the medical attention she desperately needs.\n\nHer past may have been filled with suffering, but we hope her future will be filled with love.",
+    "circumstances": "Found abandoned on the streets of Bengaluru, her body covered in ticks, bleeding, and silently suffering alone. She may have been discarded after being used for commercial breeding, left behind when she needed medical care the most.",
+    "diagnosis": "Transmissible Venereal Tumour (TVT) — a painful form of canine cancer",
+    "treatmentProvided": "Immediate emergency intake, full blood biochemistry, intensive tick removal, IV fluids, pain management, and initiated multi-week chemotherapy protocol.",
     "treatment": [
-      "Immediate emergency rescue and tick removal baths",
-      "Full blood panel, histopathology & TVT oncology diagnosis",
-      "Intravenous Vincristine chemotherapy protocol initiated",
-      "Immune support supplements and wound healing dressings",
-      "High-nutrition recovery diet and dedicated foster monitoring"
+      "Emergency veterinary intake and diagnostic cytology confirming TVT cancer",
+      "Full blood panel, intensive tick removal, and intravenous hydration therapy",
+      "Multi-week intravenous chemotherapy protocol (Vincristine)",
+      "Daily specialized liver support and immune-strengthening dietary plan",
+      "Continuous veterinary follow-up and compassionate rehabilitation"
     ],
+    "story": "Meet Sapna, a female Labrador retriever found abandoned on the streets of Bengaluru, her body covered in ticks, bleeding and silently suffering.\n\nThis beautiful female Labrador has been diagnosed with TVT (Transmissible Venereal Tumour), a form of cancer. Her condition is painful, and she now faces a difficult journey towards recovery.\n\nShe may have been discarded after being used for breeding, left behind when she needed care the most. We may never know what she has been through or how long she suffered alone.\n\nHer chemotherapy has begun. She is finally receiving the medical attention she desperately needs. Her past may have been filled with suffering, but we hope her future will be filled with love.",
+    "currentStatus": "Under Chemotherapy — Receiving Dedicated Medical Care",
+    "statusBadge": "Active Chemotherapy",
+    "statusColor": "amber",
+    "statusCode": "active",
+    "isFeatured": true,
+    "isLatest": true,
+    "isLatestHero": true,
     "heroImage": "/assets/rescues/sapna-hero.jpeg",
     "beforeImage": "/assets/rescues/sapna-street.png",
-    "treatmentImage": "/assets/rescues/sapna-treatment.png",
     "recoveryImage": "/assets/rescues/sapna-hero.jpeg",
-    "additionalImages": [
-      "/assets/rescues/sapna-leash.png",
-      "/assets/rescues/sapna-street.png",
-      "/assets/rescues/sapna-treatment.png"
+    "gallery": [
+      {
+        "url": "/assets/rescues/sapna-street.png",
+        "caption": "Found abandoned on the street eating scraps, body covered in ticks and bleeding silently",
+        "phase": "Street Intake"
+      },
+      {
+        "url": "/assets/rescues/sapna-treatment.png",
+        "caption": "Receiving IV chemotherapy infusion with protective care at veterinary clinic",
+        "phase": "Chemotherapy Session"
+      },
+      {
+        "url": "/assets/rescues/sapna-leash.png",
+        "caption": "Sitting calmly on leash after clinical treatment, experiencing warmth and human kindness",
+        "phase": "Clinical Care"
+      },
+      {
+        "url": "/assets/rescues/sapna-hero.jpeg",
+        "caption": "Radiant and smiling in her camouflage harness during ongoing chemotherapy recovery",
+        "phase": "Latest Recovery Update"
+      }
     ],
-    "isLatest": true,
-    "featured": true,
-    "supportGoal": "Support Sapna's Chemotherapy & Recovery Fund",
-    "urgentNeed": "Chemotherapy medicines, sterile IV drips, and therapeutic nutrition"
+    "additionalImages": [
+      "/assets/rescues/sapna-street.png",
+      "/assets/rescues/sapna-treatment.png",
+      "/assets/rescues/sapna-leash.png"
+    ],
+    "summary": "Meet Sapna, a female Labrador retriever found abandoned on Bengaluru streets with ticks, bleeding, and diagnosed with TVT cancer. Now undergoing chemotherapy, she is fighting with gentle resilience.",
+    "latestUpdate": "October 2026 Update: Sapna has begun her chemotherapy sessions. Her appetite is good, pain is well managed, and she greets volunteers with quiet gratitude every morning.",
+    "supportNeeded": "Chemotherapy vials (Vincristine), specialized liver tonics, high-protein clinical diet, and weekly veterinary monitoring.",
+    "urgentNeed": "Vincristine chemotherapy vials & specialized liver support supplements",
+    "supportGoal": "Sponsor Sapna's Chemotherapy Care Fund",
+    "targetFund": 12000,
+    "raisedFund": 8500
   },
   {
-    "id": "siddu-mange-recovery",
+    "id": "rescue-siddu-mange",
     "name": "Siddu",
-    "species": "Dog",
-    "breed": "Indie (Male)",
-    "age": "Young Adult",
-    "rescueDate": "2024-05-12",
-    "publicationDate": "2024-06-20",
-    "lastUpdated": "2026-10-15",
+    "animalName": "Siddu",
+    "breed": "Indie Dog (Male)",
+    "species": "Indie Dog (Male)",
+    "title": "Siddu’s Story: A Journey Towards Healing",
+    "rescueDate": "2026",
+    "publishedDate": "2026-09-10",
+    "lastUpdated": "2026-10-20",
     "location": "Bengaluru, Karnataka",
-    "status": "Recovered & In Safe Boarding",
-    "statusCode": "recovered",
-    "statusBadge": "Fully Healed & In Boarding",
-    "diagnosis": "Severe Generalized Mange, Skin Infections & Malnutrition",
-    "title": "Siddu’s Story: A Journey Towards Complete Healing",
-    "summary": "Siddu was rescued while suffering from a severe skin infection that left him hairless, raw, and emaciated. Today, he is fully healed and thriving in a loving boarding facility wearing his yellow bandana.",
-    "story": "Siddu was rescued while suffering from a severe skin infection that required urgent medical attention, medication, and dedicated care. His condition was a painful reminder of the struggles many animals endure while living on the streets without protection and care.\n\nWith intensive medicated dips, wound dressings, and round-the-clock care, Siddu began his miraculous journey towards recovery. Over the weeks, his fur grew back into a rich golden coat and his playful, radiant personality emerged.\n\nHe is now staying at a safe boarding facility, where he continues to receive loving care, nutritious meals, and attention in a stress-free environment.\n\nSiddu’s journey reflects the importance of timely intervention and the power of dedicated animal welfare.",
+    "circumstances": "Siddu was rescued while suffering from a severe skin infection that required medical attention, medication, and dedicated care. His condition was a reminder of the struggles many animals endure while living without protection.",
+    "diagnosis": "Severe Generalized Skin Infection & Dermatitis (Demodectic Mange)",
+    "treatmentProvided": "Intensive medication, medicated antiseptic dips, soothing topical wound dressings, and safe accommodation at a dedicated boarding facility.",
     "treatment": [
-      "Emergency rescue and clinical isolation for contagious mange",
-      "Weekly medicated skin baths and therapeutic anti-parasitic treatment",
-      "Oral antibiotics, pain relief, and skin barrier supplements",
-      "Complete fur regrowth and dermatological clearance",
-      "Transferred to long-term safe boarding with dedicated caretakers"
+      "Comprehensive dermatological assessment and skin scraping analysis",
+      "Weekly medicated antiparasitic baths and soothing antibacterial dressings",
+      "Systemic antibiotics, liver protectants, and high-nutrition recovery meals",
+      "Safe stay in an accredited boarding facility with individual attention",
+      "Transition to complete recovery and adoption readiness"
     ],
+    "story": "Siddu was rescued while suffering from a severe skin infection that required medical attention, medication, and dedicated care. His condition was a reminder of the struggles many animals endure while living without the protection and care they deserve.\n\nWith the necessary treatment and care, Siddu began his journey towards recovery. He is now staying at a boarding facility, where he continues to receive care and attention in a safe environment.\n\nAt ROKSH Samsthe Foundation, we believe every animal deserves a chance to heal, live with dignity, and experience kindness. Siddu’s journey reflects the importance of compassion and the difference that timely intervention can make in an animal’s life. His story is one of resilience, care, and hope for a healthier, happier future.",
+    "currentStatus": "Recovered & Safe in Boarding — Ready for Adoption",
+    "statusBadge": "Recovered & Boarding",
+    "statusColor": "emerald",
+    "statusCode": "recovered",
+    "isFeatured": true,
+    "isLatest": false,
+    "isLatestHero": false,
     "heroImage": "/assets/rescues/siddu-recovered.png",
     "beforeImage": "/assets/rescues/siddu-before.jpg",
-    "treatmentImage": "/assets/rescues/siddu-care.png",
     "recoveryImage": "/assets/rescues/siddu-recovered.png",
-    "additionalImages": [
-      "/assets/rescues/siddu-dressing.png",
-      "/assets/rescues/siddu-care.png",
-      "/assets/rescues/siddu-before.jpg"
+    "adoptionId": "adopt-siddu",
+    "gallery": [
+      {
+        "url": "/assets/rescues/siddu-before.jpg",
+        "caption": "Severe total fur loss, infected open sores, and acute emaciation upon rescue",
+        "phase": "Before Rescue"
+      },
+      {
+        "url": "/assets/rescues/siddu-care.png",
+        "caption": "Receiving medicated antiseptic dips and soothing ointments",
+        "phase": "Intensive Treatment"
+      },
+      {
+        "url": "/assets/rescues/siddu-dressing.png",
+        "caption": "Wound care and gradual regrowth of skin barrier",
+        "phase": "Recovery Progression"
+      },
+      {
+        "url": "/assets/rescues/siddu-recovered.png",
+        "caption": "Siddu today: Full glossy golden coat, wearing yellow bandana with his plush toys in boarding",
+        "phase": "Joyful Recovery"
+      }
     ],
-    "isLatest": false,
-    "featured": true,
-    "supportGoal": "Sponsor Siddu's Boarding & Monthly Care",
-    "urgentNeed": "Monthly boarding fees, nutritional meals, and routine vet checkups"
+    "additionalImages": [
+      "/assets/rescues/siddu-before.jpg",
+      "/assets/rescues/siddu-care.png",
+      "/assets/rescues/siddu-dressing.png"
+    ],
+    "summary": "Siddu was rescued while suffering from a severe skin infection that required medical attention and dedicated care. With timely intervention, he made a complete transformation and is now safe in boarding.",
+    "latestUpdate": "Siddu has fully regrown his thick, glossy coat. He is now staying at a boarding facility receiving care and attention in a safe environment, and is ready for his forever family.",
+    "supportNeeded": "Safe boarding care maintenance, nutritious meals, and preventive wellness checks.",
+    "urgentNeed": "Monthly boarding sponsorship & premium nutrition",
+    "supportGoal": "Sponsor Siddu's Boarding & Care",
+    "targetFund": 6000,
+    "raisedFund": 6000
   },
   {
-    "id": "chinna-ear-infection",
+    "id": "rescue-chinna-ear",
     "name": "Chinna",
-    "species": "Dog",
-    "breed": "Indie (Male)",
-    "age": "Adult",
-    "rescueDate": "2024-08-14",
-    "publicationDate": "2024-09-02",
-    "lastUpdated": "2026-10-18",
+    "animalName": "Chinna",
+    "breed": "Indie Dog (Male)",
+    "species": "Indie Dog (Male)",
+    "title": "Chinna’s Story – A Fight for a Pain-Free Life",
+    "rescueDate": "2026",
+    "publishedDate": "2026-08-20",
+    "lastUpdated": "2026-10-15",
     "location": "Bengaluru, Karnataka",
-    "status": "Recovered & Follow-up Care",
-    "statusCode": "recovered",
-    "statusBadge": "Pain-Free & Monitored",
-    "diagnosis": "Chronic Bilateral Otitis (Severe Ear Infection) & Injured Paw",
-    "title": "Chinna’s Story: A Fight for a Pain-Free Life",
-    "summary": "Chinna was found on the streets constantly tilting his head in agony from an untreated double ear infection. Timely veterinary treatment freed him from chronic suffering.",
-    "story": "Chinna is a street dog whose small ear infection gradually worsened, affecting both his ears. Left untreated, the infection caused him immense pain and distress. He was found on the streets constantly tilting his head, struggling with the severe pain he was enduring every second.\n\nChinna received the medical care he desperately needed. His ear canals were thoroughly treated, cleansed, and medicated by our veterinary partners.\n\nHis story is a reminder of how a seemingly small health issue, when left unattended on the street, can become a serious threat to an animal’s well-being. Chinna has recovered well and is now living pain-free, with our volunteers actively monitoring him.",
+    "circumstances": "Chinna is a street dog whose small ear infection gradually worsened, affecting both his ears. Left untreated, the infection caused him immense pain and distress. He was found on the streets constantly tilting his head, struggling with the pain he was enduring.",
+    "diagnosis": "Severe Bilateral Ear Canal Infection (Otitis Externa)",
+    "treatmentProvided": "Clinical ear canal flush, targeted antibiotic and anti-inflammatory treatment, pain relief, and protective care.",
     "treatment": [
-      "Deep ear canal decontamination under gentle veterinary sedation",
-      "Targeted antimicrobial and anti-fungal ear drops course",
-      "Wound cleansing and bandage for accompanying paw laceration",
-      "Full cessation of head tilt and pain symptoms",
-      "Ongoing volunteer spot checks during daily feeding drives"
+      "Deep clinical ear canal irrigation and antiseptic cleansing",
+      "Targeted topical and systemic broad-spectrum antimicrobial therapy",
+      "Analgesic pain management to relieve chronic head discomfort",
+      "Regular follow-up inspections during daily street feeding rounds"
     ],
+    "story": "Chinna is a street dog whose small ear infection gradually worsened, affecting both his ears. Left untreated, the infection caused him immense pain and distress. He was found on the streets constantly tilting his head, struggling with the pain he was enduring.\n\nChinna received the medical care he desperately needed. His story is a reminder of how a seemingly small health issue, when left unattended, can become a serious threat to an animal’s well-being. Every street animal deserves care, compassion, and a chance to live free from pain.\n\nChinna has recovered well. We continue to follow up on his progress to ensure he stays healthy and happy.",
+    "currentStatus": "Recovered Well — In Community Follow-Up",
+    "statusBadge": "Recovered",
+    "statusColor": "emerald",
+    "statusCode": "recovered",
+    "isFeatured": true,
+    "isLatest": false,
+    "isLatestHero": false,
     "heroImage": "/assets/rescues/chinna-recovered.png",
     "beforeImage": "/assets/rescues/chinna-before.png",
-    "treatmentImage": "/assets/rescues/chinna-treatment.png",
     "recoveryImage": "/assets/rescues/chinna-recovered.png",
+    "gallery": [
+      {
+        "url": "/assets/rescues/chinna-before.png",
+        "caption": "Severe ear discharge, constant head tilt, and intense distress from untreated ear infection",
+        "phase": "Before Rescue"
+      },
+      {
+        "url": "/assets/rescues/chinna-treatment.png",
+        "caption": "Veterinary deep cleaning, ear canal irrigation, and antiseptic soothing",
+        "phase": "Veterinary Care"
+      },
+      {
+        "url": "/assets/rescues/chinna-recovered.png",
+        "caption": "Recovered posture, healthy ears, alert and pain-free wearing his harness",
+        "phase": "Full Healing"
+      }
+    ],
     "additionalImages": [
       "/assets/rescues/chinna-before.png",
       "/assets/rescues/chinna-treatment.png"
     ],
-    "isLatest": false,
-    "featured": true,
-    "supportGoal": "Support Follow-up Care & Street Dog Medical Kits",
-    "urgentNeed": "Antiseptic supplies, ear drops, and community dog first-aid gear"
+    "summary": "Chinna was found constantly tilting his head, struggling with severe bilateral ear infections. Desperately needed medical care restored him to health, free from pain.",
+    "latestUpdate": "Chinna has recovered well. The head tilt has resolved, both ears are clear and pain-free, and we continue regular follow-up checks during feeding rounds to ensure he stays healthy.",
+    "supportNeeded": "Preventive ear drops, routine tick prevention, and seasonal veterinary check-ins.",
+    "urgentNeed": "Preventive ear hygiene solutions & periodic clinical checkups",
+    "supportGoal": "Sponsor Street Dog Medical Interventions",
+    "targetFund": 4500,
+    "raisedFund": 4500
   },
   {
-    "id": "october-puppies",
-    "name": "The October 2026 Puppies",
-    "species": "Dog",
-    "breed": "Indie Puppies (Orphaned)",
-    "age": "6 Weeks",
-    "rescueDate": "2026-10-20",
-    "publicationDate": "2026-10-20",
-    "lastUpdated": "2026-10-22",
+    "id": "rescue-lilly-honey",
+    "name": "Lilly (now Honey)",
+    "animalName": "Lilly (Honey)",
+    "breed": "Indie Dog (Female)",
+    "species": "Indie Dog (Female)",
+    "title": "From Discarded to Cherished: Lilly’s Beautiful Second Chance",
+    "rescueDate": "2026",
+    "publishedDate": "2026-07-15",
+    "lastUpdated": "2026-10-10",
     "location": "Bengaluru, Karnataka",
-    "status": "Under Warmth & Clinical Observation",
-    "statusCode": "active",
-    "statusBadge": "Orphan Care & Nutrition",
-    "diagnosis": "Maternal Separation, Dehydration & Hypothermia Risk",
-    "title": "New Rescue: Vulnerable Orphaned Puppies Given Safe Shelter",
-    "summary": "Rescued on 20 October 2026, these tiny orphaned pups were brought to safety, warmed, clinically examined, and transitioned onto nutrient-rich puppy formula.",
-    "story": "On 20 October 2026, Roksh volunteers responded to an urgent distress call regarding tiny orphaned puppies stranded without shelter or their mother.\n\nThe puppies were gently retrieved, given thermal blankets to prevent hypothermia, and taken to the veterinary clinic for a full neonatal assessment.\n\nThey are now resting comfortably on clean sofas and pads, being bottle-fed specialized puppy formula, and receiving round-the-clock observation by Roksh caregivers.",
+    "circumstances": "Lilly was a discarded breeding dog, suffering from a severe skin infection and mange. Despite all the pain and discomfort, she never stopped wagging her tail or spreading happiness to everyone around her.",
+    "diagnosis": "Severe Generalized Mange and Chronic Skin Infection",
+    "treatmentProvided": "Medicated baths, systemic anti-parasitic treatment, nutritional restoration, loving foster rehabilitation, and careful adoption placement.",
     "treatment": [
-      "Immediate warming and hydration therapy",
-      "Neonatal health screening and glucose stabilization",
-      "Deworming and puppy milk replacer diet schedule",
-      "Safe indoor foster environment with clean bedding",
-      "Pre-vaccination growth monitoring"
+      "Intensive medical baths and anti-parasitic treatment for generalized mange",
+      "Nutritional rehabilitation to restore body condition and fur regrowth",
+      "Compassionate foster care and social rehabilitation",
+      "Rigorous home vetting and adoption into a dedicated forever family"
     ],
-    "heroImage": "/assets/rescues/puppy-couch-oct20.jpeg",
-    "beforeImage": "/assets/rescues/puppy-clinic-oct20.jpeg",
-    "treatmentImage": "/assets/rescues/puppy-clinic-oct20.jpeg",
-    "recoveryImage": "/assets/rescues/puppy-couch-oct20.jpeg",
-    "videoUrl": "/assets/rescues/puppy-20261020.mp4",
-    "additionalImages": [
-      "/assets/rescues/puppy-clinic-oct20.jpeg",
-      "/assets/rescues/puppy-couch-oct20.jpeg"
-    ],
+    "story": "Lilly was a discarded breeding dog, suffering from a severe skin infection and mange. Despite all the pain and discomfort, she never stopped wagging her tail or spreading happiness to everyone around her.\n\nToday, Lilly has a new name, Honey, and a loving family to call her own. From being discarded to being deeply loved, her story is a beautiful reminder that every dog deserves a second chance.",
+    "currentStatus": "Adopted — Cherished with Her Loving Family",
+    "statusBadge": "Adopted & Cherished",
+    "statusColor": "purple",
+    "statusCode": "recovered",
+    "isFeatured": true,
     "isLatest": false,
-    "featured": true,
-    "supportGoal": "Sponsor Puppy Formula & Vaccinations",
-    "urgentNeed": "Puppy starter food, heating supplies, and upcoming core vaccines"
+    "isLatestHero": false,
+    "heroImage": "/assets/rescues/lilly-recovered.png",
+    "beforeImage": "/assets/rescues/lilly-before.png",
+    "recoveryImage": "/assets/rescues/lilly-recovered.png",
+    "gallery": [
+      {
+        "url": "/assets/rescues/lilly-before.png",
+        "caption": "Discarded breeding dog with severe skin infection, mange, and hair loss across her body",
+        "phase": "Intake & Rescue"
+      },
+      {
+        "url": "/assets/rescues/lilly-care.png",
+        "caption": "Receiving intensive medicated washes, nutrition, and restorative care while still wagging her tail",
+        "phase": "Treatment & Healing"
+      },
+      {
+        "url": "/assets/rescues/lilly-recovered.png",
+        "caption": "Cherished and deeply loved: Lilly (now Honey) thriving in the embrace of her loving adoptive family",
+        "phase": "Forever Home"
+      }
+    ],
+    "additionalImages": [
+      "/assets/rescues/lilly-before.png",
+      "/assets/rescues/lilly-care.png"
+    ],
+    "summary": "Lilly was a discarded breeding dog suffering from severe mange who never lost her loving spirit. Today she is named Honey, living cherished with her wonderful adoptive family.",
+    "latestUpdate": "From being discarded to being deeply loved, Honey's story is a beautiful reminder that every dog deserves a second chance. She is thriving in her loving forever home.",
+    "supportNeeded": "Sponsor similar rehabilitation cases for discarded breeding and street dogs.",
+    "urgentNeed": "Support for future discarded breeding dogs requiring mange rehabilitation",
+    "supportGoal": "Sponsor Rehabilitation & Second Chances",
+    "targetFund": 5000,
+    "raisedFund": 5000
+  },
+  {
+    "id": "rescue-idli-spine",
+    "name": "Idli",
+    "animalName": "Idli",
+    "breed": "Indie Dog (Female)",
+    "species": "Indie Dog (Female)",
+    "title": "Left Behind, But Never Giving Up: Idli’s Story of Resilience",
+    "rescueDate": "2026",
+    "publishedDate": "2026-06-30",
+    "lastUpdated": "2026-10-12",
+    "location": "Bengaluru, Karnataka",
+    "circumstances": "Idli was one of six puppies. While all her siblings found loving homes, she was left behind. Then, a terrible accident injured her spine, leaving her unable to walk.",
+    "diagnosis": "Spinal Trauma & Posterior Immobility from Road Accident",
+    "treatmentProvided": "Two months of intensive veterinary treatment, nerve and spinal rehabilitation, supportive therapy, and physical recovery.",
+    "treatment": [
+      "Spinal radiographic examination and neuro-supportive emergency care",
+      "Daily physiotherapy exercises, nerve-regeneration medication, and supported walking",
+      "Two months of continuous clinical monitoring and dedicated foster nursing",
+      "Complete mobility recovery: standing, walking, and running independently"
+    ],
+    "story": "Idli was one of six puppies. While all her siblings found loving homes, she was left behind. Then, a terrible accident injured her spine, leaving her unable to walk.\n\nAfter two months of treatment, this little fighter found her feet again!\n\nToday, Idli is walking, healing, and still waiting for one special thing — a loving family to call her own.",
+    "currentStatus": "Walking Again — Healing & Waiting for a Loving Family",
+    "statusBadge": "Seeking Adoption",
+    "statusColor": "blue",
+    "statusCode": "active",
+    "isFeatured": true,
+    "isLatest": false,
+    "isLatestHero": false,
+    "heroImage": "/assets/rescues/idli-recovery.jpg",
+    "beforeImage": null,
+    "recoveryImage": "/assets/rescues/idli-recovery.jpg",
+    "gallery": [
+      {
+        "url": "/assets/rescues/idli-recovery.jpg",
+        "caption": "After two months of dedicated treatment, Idli stands and walks proudly on her own four feet outdoors",
+        "phase": "Walking & Healing"
+      }
+    ],
+    "additionalImages": [
+      "/assets/rescues/idli-recovery.jpg"
+    ],
+    "summary": "Left behind when her puppy siblings were adopted, Idli suffered a terrible accident that injured her spine. After two months of treatment, this little fighter found her feet again and is waiting for a loving home.",
+    "latestUpdate": "Today, Idli is walking, healing, and still waiting for one special thing — a loving family to call her own. She is playful, determined, and ready for a gentle home.",
+    "supportNeeded": "Physiotherapy supplements, nourishing puppy diet, and responsible adoption placement.",
+    "urgentNeed": "Nerve health supplements & loving permanent adoption",
+    "supportGoal": "Sponsor Idli's Recovery & Care",
+    "targetFund": 5500,
+    "raisedFund": 3200
   }
 ]

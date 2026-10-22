@@ -113,3 +113,22 @@
   z-index: 15;
   margin: 0;
 }
+
+@media (max-width: 480px) {
+  .comparison-badge {
+    top: 8px;
+    padding: 4px 8px;
+    font-size: 0.68rem;
+  }
+  .badge-before {
+    left: 8px;
+  }
+  .badge-after {
+    right: 8px;
+  }
+  .handle-button {
+    width: 32px;
+    height: 32px;
+  }
+}
+

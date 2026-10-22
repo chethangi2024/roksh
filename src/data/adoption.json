@@ -1,0 +1,403 @@
+[
+  {
+    "id": "adopt-bittu",
+    "name": "Bittu",
+    "gender": "Male",
+    "age": "6 Months Old",
+    "breed": "Indie Dog",
+    "location": "Bangalore",
+    "posterImage": "/assets/adoption/Bittu.jpeg",
+    "aspectRatio": "0.71",
+    "healthStatus": {
+      "vaccinated": true,
+      "dewormed": true,
+      "deflead": true,
+      "sterilised": false,
+      "notes": "Vaccinated, deflead, and dewormed."
+    },
+    "temperament": [
+      "Adores human company, especially kids",
+      "Happily plays with kittens and dogs",
+      "Intelligent, obedient and eager to please",
+      "Happy, loving and full of life",
+      "Well-mannered, loyal & always by your side"
+    ],
+    "tagline": "Give Bittu a home, gain a loyal friend forever!",
+    "description": "A sweet, smart & playful soul! Bittu is not just a pet, he's family waiting for you! He adores people and children, gets along effortlessly with other pets, and has a deeply loving disposition.",
+    "contact": {
+      "phone": "9620702967",
+      "whatsapp": "919620702967",
+      "city": "Bangalore"
+    },
+    "altText": "Adoption poster for Bittu, a 6-month-old male Indie puppy, vaccinated, deflead, and dewormed in Bangalore"
+  },
+  {
+    "id": "adopt-blacky",
+    "name": "Blacky",
+    "gender": "Male",
+    "age": "45 Days Old",
+    "breed": "Indie Puppy",
+    "location": "Bengaluru",
+    "posterImage": "/assets/adoption/Blacky@2x.png",
+    "aspectRatio": "0.70",
+    "healthStatus": {
+      "vaccinated": true,
+      "dewormed": true,
+      "deflead": false,
+      "sterilised": false,
+      "notes": "Vaccinated and dewormed."
+    },
+    "temperament": [
+      "Tiny bundle of joy",
+      "Ready to fill your home with love",
+      "Gentle and observant puppy"
+    ],
+    "tagline": "Looking for a forever home — Adopt Me!",
+    "description": "Blacky is a tiny bundle of joy, ready to fill your home with warmth and unconditional love. Part of a rescued litter of indie puppies receiving tender care.",
+    "contact": {
+      "phone": "7204004104",
+      "whatsapp": "917204004104",
+      "city": "Bengaluru"
+    },
+    "altText": "Adoption poster for Blacky, a 45-day-old male Indie puppy with blue ribbon, vaccinated and dewormed in Bengaluru"
+  },
+  {
+    "id": "adopt-chunky",
+    "name": "Chunky",
+    "gender": "Male",
+    "age": "45 Days Old",
+    "breed": "Indie Puppy",
+    "location": "Bengaluru",
+    "posterImage": "/assets/adoption/Chunky@2x.png",
+    "aspectRatio": "0.70",
+    "healthStatus": {
+      "vaccinated": true,
+      "dewormed": true,
+      "deflead": false,
+      "sterilised": false,
+      "notes": "Vaccinated and dewormed."
+    },
+    "temperament": [
+      "Tiny bundle of joy",
+      "Playful and spirited puppy",
+      "Ready to fill your home with love"
+    ],
+    "tagline": "Looking for a forever home — Adopt Me!",
+    "description": "Chunky is a tiny bundle of joy with a playful spark, ready to fill your family's days with laughter and companionship.",
+    "contact": {
+      "phone": "7204004104",
+      "whatsapp": "917204004104",
+      "city": "Bengaluru"
+    },
+    "altText": "Adoption poster for Chunky, a 45-day-old male Indie puppy with blue ribbon, vaccinated and dewormed in Bengaluru"
+  },
+  {
+    "id": "adopt-lucy",
+    "name": "Lucy",
+    "gender": "Female",
+    "age": "6 Months Old",
+    "breed": "Indie Dog",
+    "location": "Bangalore",
+    "posterImage": "/assets/adoption/Lucy.jpeg",
+    "aspectRatio": "0.71",
+    "healthStatus": {
+      "vaccinated": true,
+      "dewormed": true,
+      "deflead": true,
+      "sterilised": false,
+      "notes": "Vaccinated, deflead, and dewormed."
+    },
+    "temperament": [
+      "Adore human company, especially kids",
+      "Happily plays with both kittens and dogs",
+      "Mischief maker with a heart of gold!",
+      "Curious explorer who loves discovering new things",
+      "Bright, intelligent and quick to learn!"
+    ],
+    "tagline": "A Little Love. A Lifetime of Joy!",
+    "description": "Lucy is a little bundle of joy with a BIG heart! Give Lucy a home, and gain a loyal friend for life! She brings boundless sweetness, curiosity, and warmth to everyone she meets.",
+    "contact": {
+      "phone": "9620702967",
+      "whatsapp": "919620702967",
+      "city": "Bangalore"
+    },
+    "altText": "Adoption poster for Lucy, a 6-month-old female Indie puppy with red collar, vaccinated, deflead, and dewormed in Bangalore"
+  },
+  {
+    "id": "adopt-max",
+    "name": "Max",
+    "gender": "Male",
+    "age": "6 Months Old",
+    "breed": "Indie Dog",
+    "location": "Bangalore",
+    "posterImage": "/assets/adoption/Max.jpeg",
+    "aspectRatio": "0.71",
+    "healthStatus": {
+      "vaccinated": true,
+      "dewormed": true,
+      "deflead": true,
+      "sterilised": false,
+      "notes": "Vaccinated, deflead, and dewormed."
+    },
+    "temperament": [
+      "Loves splashing in water",
+      "Adores human company, especially kids",
+      "Happily plays with both kittens and dogs",
+      "Friendly, playful and full of love!"
+    ],
+    "tagline": "Give a Home, Get a Best Friend!",
+    "description": "A heart full of love is waiting for you! Max is a cheerful, water-loving pup who adores children and makes friends with everyone—both humans and fellow animals alike.",
+    "contact": {
+      "phone": "9620702967",
+      "whatsapp": "919620702967",
+      "city": "Bangalore"
+    },
+    "altText": "Adoption poster for Max, a 6-month-old male Indie dog who loves splashing in water, vaccinated, deflead, and dewormed in Bangalore"
+  },
+  {
+    "id": "adopt-pihu",
+    "name": "Pihu",
+    "gender": "Female",
+    "age": "6 Months Old",
+    "breed": "Indie Dog",
+    "location": "Bangalore",
+    "posterImage": "/assets/adoption/Pihu.jpeg",
+    "aspectRatio": "0.71",
+    "healthStatus": {
+      "vaccinated": true,
+      "dewormed": true,
+      "deflead": true,
+      "sterilised": false,
+      "notes": "Vaccinated, deflead, and dewormed."
+    },
+    "temperament": [
+      "Adores human company, especially kids",
+      "Happily plays with both kittens and dogs",
+      "Makes everyone happy with her sweet nature",
+      "Playful, cheerful & always ready for fun!"
+    ],
+    "tagline": "Small in size, Big in Love!",
+    "description": "Pihu is a bundle of love, joy, and endless tail wags! Give Pihu a home, and get a friend for life. Gentle with children and a natural buddy for cats and dogs.",
+    "contact": {
+      "phone": "9620702967",
+      "whatsapp": "919620702967",
+      "city": "Bangalore"
+    },
+    "altText": "Adoption poster for Pihu, a 6-month-old female Indie puppy with purple collar, vaccinated, deflead, and dewormed in Bangalore"
+  },
+  {
+    "id": "adopt-pinky",
+    "name": "Pinky",
+    "gender": "Female",
+    "age": "45 Days Old",
+    "breed": "Indie Puppy",
+    "location": "Bengaluru",
+    "posterImage": "/assets/adoption/Pinky@2x.png",
+    "aspectRatio": "0.70",
+    "healthStatus": {
+      "vaccinated": true,
+      "dewormed": true,
+      "deflead": false,
+      "sterilised": false,
+      "notes": "Vaccinated and dewormed."
+    },
+    "temperament": [
+      "Tiny bundle of joy",
+      "Ready to fill your home with love",
+      "Sweet, calm disposition"
+    ],
+    "tagline": "Looking for a forever home — Adopt Me!",
+    "description": "Pinky is a tiny bundle of joy, ready to fill your home with love. Rescued with her siblings, she is thriving and eager to bond with a responsible family.",
+    "contact": {
+      "phone": "7204004104",
+      "whatsapp": "917204004104",
+      "city": "Bengaluru"
+    },
+    "altText": "Adoption poster for Pinky, a 45-day-old female black Indie puppy with beaded collar, vaccinated and dewormed in Bengaluru"
+  },
+  {
+    "id": "adopt-ruby",
+    "name": "Ruby",
+    "gender": "Female",
+    "age": "6 Months Old",
+    "breed": "Indie Dog",
+    "location": "Bangalore",
+    "posterImage": "/assets/adoption/Ruby.jpeg",
+    "aspectRatio": "0.71",
+    "healthStatus": {
+      "vaccinated": true,
+      "dewormed": true,
+      "deflead": true,
+      "sterilised": false,
+      "notes": "Vaccinated, deflead, and dewormed."
+    },
+    "temperament": [
+      "Adores human company, especially kids",
+      "Happily plays with both kittens and dogs",
+      "Intelligent, obedient and always eager to please",
+      "A happy soul who spreads smiles everywhere!",
+      "When she jumps... it's like she's going for a gold medal at the Olympics!"
+    ],
+    "tagline": "A Friend for Life — Bundle of Joy, Love & Energy!",
+    "description": "Ruby is a bundle of joy, love & energy! She adores human company, especially kids, and happily plays with both kittens and dogs. Her Olympic-style jumps and bright personality make every day an adventure.",
+    "contact": {
+      "phone": "9620702967",
+      "whatsapp": "919620702967",
+      "city": "Bangalore"
+    },
+    "altText": "Adoption poster for Ruby, a 6-month-old female Indie dog with pink collar, enthusiastic jumper, vaccinated, deflead, and dewormed in Bangalore"
+  },
+  {
+    "id": "adopt-ruhani",
+    "name": "Ruhani",
+    "gender": "Female",
+    "age": "45 Days Old",
+    "breed": "Indie Puppy",
+    "location": "Bengaluru",
+    "posterImage": "/assets/adoption/Ruhani@2x.png",
+    "aspectRatio": "0.70",
+    "healthStatus": {
+      "vaccinated": true,
+      "dewormed": true,
+      "deflead": false,
+      "sterilised": false,
+      "notes": "Vaccinated and dewormed."
+    },
+    "temperament": [
+      "Tiny bundle of joy",
+      "Soulful, affectionate eyes",
+      "Ready to fill your home with love"
+    ],
+    "tagline": "Looking for a forever home — Adopt Me!",
+    "description": "Ruhani is a tiny bundle of joy, ready to fill your home with love. She has a gentle presence and is ready for a safe, caring family home.",
+    "contact": {
+      "phone": "7204004104",
+      "whatsapp": "917204004104",
+      "city": "Bengaluru"
+    },
+    "altText": "Adoption poster for Ruhani, a 45-day-old female black Indie puppy with gold chain, vaccinated and dewormed in Bengaluru"
+  },
+  {
+    "id": "adopt-ruhi",
+    "name": "Ruhi",
+    "gender": "Female",
+    "age": "45 Days Old",
+    "breed": "Indie Puppy",
+    "location": "Bengaluru",
+    "posterImage": "/assets/adoption/Ruhi@2x.png",
+    "aspectRatio": "0.70",
+    "healthStatus": {
+      "vaccinated": true,
+      "dewormed": true,
+      "deflead": false,
+      "sterilised": false,
+      "notes": "Vaccinated and dewormed."
+    },
+    "temperament": [
+      "Tiny bundle of joy",
+      "Alert and loving nature",
+      "Ready to fill your home with love"
+    ],
+    "tagline": "Looking for a forever home — Adopt Me!",
+    "description": "Ruhi is a tiny bundle of joy, ready to fill your home with love. She loves cuddles and safe indoor spaces after an early start on the streets.",
+    "contact": {
+      "phone": "7204004104",
+      "whatsapp": "917204004104",
+      "city": "Bengaluru"
+    },
+    "altText": "Adoption poster for Ruhi, a 45-day-old female black Indie puppy with beaded necklace, vaccinated and dewormed in Bengaluru"
+  },
+  {
+    "id": "adopt-siddu",
+    "name": "Siddu",
+    "gender": "Male",
+    "age": "5 Years Old",
+    "breed": "Indie Dog",
+    "location": "Bengaluru",
+    "posterImage": "/assets/adoption/Siddu@2x.png",
+    "aspectRatio": "0.70",
+    "healthStatus": {
+      "vaccinated": true,
+      "dewormed": true,
+      "deflead": true,
+      "sterilised": true,
+      "notes": "Fully vaccinated, dewormed, sterilised, and deflead. Fully recovered from past mange."
+    },
+    "temperament": [
+      "Sweet, gentle Indie boy",
+      "Calm and well-mannered companion",
+      "Loves his plush toys and peaceful naps",
+      "Thrives with loving human presence"
+    ],
+    "tagline": "Looking for a forever home — Give him a home today!",
+    "description": "Siddu is a sweet Indie boy waiting for his forever family. After surviving severe skin infection and completing his recovery with Roksh, Siddu is now thriving, wearing his yellow bandana, and ready for a compassionate home.",
+    "rescueStoryId": "rescue-siddu-mange",
+    "contact": {
+      "phone": "7204004104",
+      "whatsapp": "917204004104",
+      "city": "Bengaluru"
+    },
+    "altText": "Adoption poster for Siddu, a 5-year-old rescued male Indie dog wearing yellow bandana with plush toys, vaccinated, dewormed, sterilised, and deflead in Bengaluru"
+  },
+  {
+    "id": "adopt-snowy",
+    "name": "Snowy",
+    "gender": "Female",
+    "age": "1.5 Years Old",
+    "breed": "Indie Dog",
+    "location": "Bengaluru",
+    "posterImage": "/assets/adoption/Snowy.png",
+    "aspectRatio": "0.70",
+    "healthStatus": {
+      "vaccinated": true,
+      "dewormed": true,
+      "deflead": true,
+      "sterilised": false,
+      "notes": "Vaccinated, dewormed, and deflead."
+    },
+    "temperament": [
+      "Active and playful",
+      "Alert and energetic",
+      "Will fill your family with love"
+    ],
+    "tagline": "Looking for a forever home — Adopt Me!",
+    "description": "Snowy is active and playful, and she will fill your family with love. She loves open space, outdoor playtime, and affectionate family bonds.",
+    "contact": {
+      "phone": "7204004104",
+      "whatsapp": "917204004104",
+      "city": "Bengaluru"
+    },
+    "altText": "Adoption poster for Snowy, a 1.5-year-old white female Indie dog, active and playful, vaccinated, dewormed, and deflead in Bengaluru"
+  },
+  {
+    "id": "adopt-tommy",
+    "name": "Tommy",
+    "gender": "Male",
+    "age": "4 - 5 Months Old",
+    "breed": "Indie Breed",
+    "location": "Bangalore",
+    "posterImage": "/assets/adoption/Tommy.jpeg",
+    "aspectRatio": "0.67",
+    "healthStatus": {
+      "vaccinated": true,
+      "dewormed": true,
+      "deflead": false,
+      "sterilised": false,
+      "notes": "Healthy, active & full of life. Dewormed for a healthy start. Both vaccine dosages completed."
+    },
+    "temperament": [
+      "Extremely shy due to hostile surroundings he lived",
+      "Needs time, patience and kindness",
+      "With love and care, will be your most loyal companion forever",
+      "Active & full of life once comfortable"
+    ],
+    "tagline": "A little love can change his world — Adopt Tommy. Give him love, and he'll give you his heart.",
+    "description": "Tommy is a 4-5 month old male Indie puppy. He was rescued from hostile surroundings which made him shy at first, but under patient kindness he reveals an extraordinary loyal heart. Both vaccination doses are complete.",
+    "contact": {
+      "phone": "9008025461",
+      "whatsapp": "919008025461",
+      "city": "Bangalore"
+    },
+    "altText": "Adoption poster for Tommy, a 4-5 month old white Indie male puppy, gentle and shy, fully vaccinated and dewormed in Bangalore"
+  }
+]

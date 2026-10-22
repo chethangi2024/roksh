@@ -6,7 +6,6 @@ export default function TermsPage() {
     <div className="legal-page">
       <section className="page-hero">
         <div className="container">
-          <span className="section-eyebrow">Legal & Compliance</span>
           <h1 className="page-hero-title heading-display">Donation Terms & Conditions</h1>
           <p className="page-hero-subtitle text-lead">
             Last Updated: 22 October 2026 • Roksh Samsthe Foundation

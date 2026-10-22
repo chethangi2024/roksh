@@ -19,7 +19,6 @@ export default function FeedingPage({ onOpenDonate }) {
       {/* Page Hero */}
       <section className="page-hero">
         <div className="container">
-          <span className="section-eyebrow">The Feeding Programme</span>
           <h1 className="page-hero-title heading-display">
             Nourishing The Voiceless Every Single Day
           </h1>
@@ -76,7 +75,6 @@ export default function FeedingPage({ onOpenDonate }) {
       <section className="feeding-drives-section">
         <div className="container">
           <div className="section-header">
-            <span className="section-eyebrow">Field Activity Logs</span>
             <h2 className="section-title">Verified Feeding Drives</h2>
             <p className="section-description">
               Photographic records of our recent and historical community sustenance drives across Bengaluru routes.
@@ -100,7 +98,6 @@ export default function FeedingPage({ onOpenDonate }) {
         <div className="container">
           <div className="sponsor-meal-card glass-panel">
             <div className="sponsor-content-side">
-              <span className="section-eyebrow">Direct Hunger Relief</span>
               <h2 className="heading-display sponsor-title">Sponsor a Meal Pot</h2>
               <p className="sponsor-desc">
                 Select an impact tier below to directly fund fresh eggs, rice, broth, and clean feeding bowls for hungry street animals.
@@ -119,7 +116,7 @@ export default function FeedingPage({ onOpenDonate }) {
                     <div className="preset-details">
                       <div className="preset-head">
                         <strong>₹{preset.amount.toLocaleString('en-IN')}</strong>
-                        <span className="meals-badge">{preset.meals} Street Meals</span>
+                        <span className="text-muted text-sm font-semibold">({preset.meals} Street Meals)</span>
                       </div>
                       <p className="preset-desc-text">{preset.desc}</p>
                     </div>
@@ -157,7 +154,6 @@ export default function FeedingPage({ onOpenDonate }) {
       <section className="food-requirements-section">
         <div className="container">
           <div className="section-header">
-            <span className="section-eyebrow">In-Kind Contributions</span>
             <h2 className="section-title">Essential Feeding Supplies Needed</h2>
             <p className="section-description">
               Prefer donating raw food supplies? We gladly accept deliveries or drop-offs in Bengaluru.

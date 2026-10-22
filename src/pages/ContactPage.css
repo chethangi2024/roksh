@@ -199,3 +199,24 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 600px) {
+  .protocol-card {
+    padding: 24px 18px;
+    border-radius: var(--radius-lg);
+  }
+  .contact-form-card {
+    padding: 28px 18px;
+    border-radius: var(--radius-lg);
+  }
+  .protocol-whatsapp-bar {
+    padding: 18px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .protocol-whatsapp-bar .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
