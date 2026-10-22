@@ -128,3 +128,21 @@
     order: 2;
   }
 }
+
+@media (max-width: 600px) {
+  .pillar-detail-section {
+    padding: 44px 0;
+  }
+  .pillar-image-frame {
+    border-radius: 18px;
+  }
+  .pillar-action-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .pillar-action-row .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -247,12 +247,27 @@
 }
 
 @media (max-width: 600px) {
+  .about-narrative-section,
+  .vision-mission-section,
+  .principles-section,
+  .about-cta-section {
+    padding: 44px 0;
+  }
   .narrative-image-frame {
     border-radius: var(--radius-lg);
   }
   .vm-card {
-    padding: 28px 20px;
+    padding: 24px 18px;
     border-radius: var(--radius-lg);
+  }
+  .flex-center-gap {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  .flex-center-gap .btn {
+    width: 100%;
+    justify-content: center;
   }
 }
 

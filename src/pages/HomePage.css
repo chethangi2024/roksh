@@ -266,17 +266,24 @@
   bottom: 12px;
   left: 12px;
   background: rgba(18, 19, 22, 0.85);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   color: #FFF;
-  padding: 4px 10px;
+  padding: 5px 12px;
   border-radius: var(--radius-full);
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 600;
+  max-width: calc(100% - 24px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .featured-secondary-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
+  min-width: 0;
 }
 
 .sub-frame {
@@ -285,24 +292,31 @@
   border-radius: var(--radius-sm);
   overflow: hidden;
   background-color: #121316;
+  min-width: 0;
 }
 
 .sub-frame-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .sub-frame-tag {
   position: absolute;
-  bottom: 6px;
-  left: 6px;
-  background: rgba(0, 0, 0, 0.75);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(18, 19, 22, 0.88) 100%);
   color: #FFF;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 0.68rem;
+  padding: 14px 8px 6px;
+  font-size: 0.72rem;
   font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Split Right: Details */
@@ -311,6 +325,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-width: 0;
 }
 
 .latest-status-strip {
@@ -967,10 +982,17 @@
 @media (max-width: 992px) {
   .hero-container {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
   }
   .latest-rescue-card {
     grid-template-columns: 1fr;
+    border-radius: 20px;
+  }
+  .latest-card-gallery {
+    padding: 24px;
+  }
+  .latest-card-details {
+    padding: 28px 24px;
   }
   .transformation-showcase {
     grid-template-columns: 1fr;
@@ -985,10 +1007,6 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 24px 28px;
-  }
-  .hero-container {
-    grid-template-columns: 1fr;
-    gap: 36px;
   }
 }
 
@@ -1069,11 +1087,73 @@
   .transformations-section,
   .home-feeding-section,
   .bank-vault-section {
-    padding: 48px 0;
+    padding: 44px 0;
+  }
+
+  /* Section 2 Latest Rescue Card Mobile Alignment */
+  .latest-rescue-card {
+    border-radius: 18px;
+  }
+
+  .latest-card-gallery {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .latest-card-details {
+    padding: 20px 16px;
+  }
+
+  .featured-secondary-grid {
+    gap: 10px;
+  }
+
+  .rescue-dates-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 12px 14px;
+    margin-bottom: 16px;
+  }
+
+  .rescue-dates-grid .date-cell:last-child {
+    grid-column: span 2;
+  }
+
+  .story-summary-text {
+    margin-bottom: 22px;
+  }
+
+  .latest-actions-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .latest-actions-row .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Section 9 Bank Vault Mobile */
+  .bank-vault-box {
+    padding: 28px 20px;
+    border-radius: 20px;
+    gap: 28px;
+  }
+
+  .v-upi-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .btn-copy-vault {
+    width: 100%;
+    justify-content: center;
   }
 
   .home-adoption-section {
-    padding: 48px 0;
+    padding: 44px 0;
   }
 
   .home-adoption-grid {
@@ -1087,6 +1167,40 @@
 
   .home-adoption-footer-banner .btn {
     width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .rescue-dates-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .rescue-dates-grid .date-cell:last-child {
+    grid-column: span 1;
+  }
+
+  .latest-card-gallery {
+    padding: 14px 12px;
+  }
+
+  .latest-card-details {
+    padding: 18px 12px;
+  }
+
+  .latest-actions-row .btn {
+    font-size: 0.88rem;
+    padding: 12px 14px;
+  }
+
+  .bank-vault-box {
+    padding: 22px 14px;
+  }
+
+  .vault-qr-image {
+    width: 170px;
+    height: 170px;
   }
 }
 
@@ -1112,6 +1226,22 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+  }
+
+  .latest-card-gallery {
+    padding: 10px;
+  }
+
+  .latest-card-details {
+    padding: 14px 10px;
+  }
+
+  .date-cell .cell-label {
+    font-size: 0.68rem;
+  }
+
+  .date-cell .cell-val {
+    font-size: 0.86rem;
   }
 }
 

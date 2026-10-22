@@ -133,9 +133,14 @@ export default function RescueDetailPage({ onOpenDonate }) {
                 <div className="documentary-gallery-grid">
                   {rescue.gallery.map((item, i) => (
                     <div key={i} className="doc-photo-card">
-                      <img src={item.url} alt={item.caption || `${displayName} photo ${i + 1}`} loading="lazy" />
+                      <img 
+                        src={item.url} 
+                        alt={item.caption || `${displayName} documentary photo ${i + 1}`} 
+                        decoding="async"
+                      />
                       {item.caption && (
                         <div className="doc-photo-caption">
+                          {item.phase && <span className="doc-phase-tag">{item.phase}</span>}
                           <p>{item.caption}</p>
                         </div>
                       )}

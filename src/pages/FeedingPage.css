@@ -274,9 +274,34 @@
 }
 
 @media (max-width: 600px) {
+  .feeding-intro-section,
+  .feeding-drives-section,
+  .sponsor-meal-section,
+  .food-requirements-section {
+    padding: 44px 0;
+  }
+
+  .feeding-core-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 16px 0;
+  }
+
   .sponsor-meal-card {
     padding: 24px 18px;
     border-radius: var(--radius-lg);
+    gap: 28px;
+  }
+
+  .preset-card {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .sponsor-meal-card {
+    padding: 20px 14px;
   }
 }
 
