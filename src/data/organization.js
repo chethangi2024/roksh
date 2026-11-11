@@ -40,9 +40,9 @@ export const organizationData = {
       icon: "Stethoscope"
     },
     {
-      title: "Daily Community Feeding Drives",
-      desc: "Fresh, hygienic, protein-rich meals cooked every single morning and distributed to street packs along designated routes.",
-      icon: "UtensilsCrossed"
+      title: "Adoption: Finding Forever Homes",
+      desc: "We actively search for loving, responsible families for our rescued dogs and cats. Every adoption is a chance to give them the safety, care, and forever home they deserve.",
+      icon: "Heart"
     },
     {
       title: "Rehabilitation & Safe Boarding",

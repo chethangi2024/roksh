@@ -86,7 +86,7 @@ export default function FeedingPage({ onOpenDonate }) {
               <FeedingCard 
                 key={drive.id} 
                 drive={drive} 
-                onSponsor={() => onOpenDonate(1500)} 
+                onSponsor={() => onOpenDonate(3000)} 
               />
             ))}
           </div>

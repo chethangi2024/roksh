@@ -72,9 +72,6 @@ export default function Navbar({ onOpenDonate }) {
           <NavLink to="/rescues" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
             Latest Rescues
           </NavLink>
-          <NavLink to="/feeding" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
-            Feeding
-          </NavLink>
           <NavLink to="/adopt" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
             Adopt
           </NavLink>
@@ -138,13 +135,10 @@ export default function Navbar({ onOpenDonate }) {
               About Roksh
             </NavLink>
             <NavLink to="/our-work" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
-              Our 4 Pillars of Work
+              Our Work
             </NavLink>
             <NavLink to="/rescues" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
               Latest Rescues Archive
-            </NavLink>
-            <NavLink to="/feeding" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
-              Feeding Programme
             </NavLink>
             <NavLink to="/adopt" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
               Adopt a Dog

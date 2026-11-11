@@ -122,11 +122,6 @@ export default function RescueStories({ rescues, onOpenStory, onSupportRescue })
                 <div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'var(--text-muted)', fontSize: '0.8rem', marginBottom: '0.5rem' }}>
                     <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                      <Calendar size={13} />
-                      {item.rescueDate}
-                    </span>
-                    <span>•</span>
-                    <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
                       <MapPin size={13} />
                       {item.location}
                     </span>

@@ -117,16 +117,8 @@ export default function RescueDetailModal({ rescue, onClose, onSupportRescue }) 
             </div>
           )}
 
-          {/* Meta Dates Bar */}
+          {/* Meta Information Bar */}
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.25rem', color: 'var(--text-muted)', fontSize: '0.85rem', marginBottom: '1rem', borderBottom: '1px solid var(--border-subtle)', paddingBottom: '0.75rem' }}>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
-              <Calendar size={15} />
-              <strong>Actual Rescue Date:</strong> {rescue.rescueDate}
-            </span>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
-              <Calendar size={15} />
-              <strong>Published:</strong> {rescue.publishedDate}
-            </span>
             <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
               <MapPin size={15} />
               <strong>Location:</strong> {rescue.location}

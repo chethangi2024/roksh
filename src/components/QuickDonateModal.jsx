@@ -6,20 +6,35 @@ import siteContent from '../data/siteContent.json';
 import './QuickDonateModal.css';
 
 const DONATION_TIERS = [
-  { amount: 500, label: '10 Street Meals', desc: 'Cooked rice, egg, and broth for hungry dogs' },
-  { amount: 1500, label: 'Wound Care Kit', desc: 'Medicated dips, bandages & pain relief' },
-  { amount: 3500, label: 'Chemo / Cancer Fund', desc: 'Chemotherapy vial & IV oncology care' },
-  { amount: 5000, label: 'Monthly Boarding', desc: 'Safe shelter, boarding & care for 1 dog' },
+  { 
+    amount: 3000, 
+    label: 'Vaccinate & Protect', 
+    desc: 'Support vaccination initiatives that help protect street dogs and cats from preventable diseases.' 
+  },
+  { 
+    amount: 5000, 
+    label: 'Support Medical Care', 
+    desc: 'Contribute towards veterinary consultations, medicines, and treatment for rescued animals.' 
+  },
 ];
 
 export default function QuickDonateModal({ isOpen, onClose, initialTier = null }) {
   const { showToast } = useToast();
   const [copied, setCopied] = useState(false);
-  const [selectedTier, setSelectedTier] = useState(initialTier || 1500);
+  const [selectedTier, setSelectedTier] = useState(initialTier || 3000);
   const [customAmount, setCustomAmount] = useState('');
 
   useEffect(() => {
-    if (initialTier) setSelectedTier(initialTier);
+    if (initialTier) {
+      const match = DONATION_TIERS.find((t) => t.amount === initialTier);
+      if (match) {
+        setSelectedTier(initialTier);
+        setCustomAmount('');
+      } else {
+        setSelectedTier(null);
+        setCustomAmount(String(initialTier));
+      }
+    }
   }, [initialTier]);
 
   useEffect(() => {
@@ -77,7 +92,7 @@ export default function QuickDonateModal({ isOpen, onClose, initialTier = null }
             Support Roksh Samsthe Foundation
           </h2>
           <p className="modal-subtitle">
-            100% of your donation directly funds emergency medical care, chemotherapy, daily feeding cauldrons, and safe boarding.
+            100% of your donation directly funds vaccinations, emergency veterinary consultations, medicines, and safe shelter.
           </p>
         </div>
 

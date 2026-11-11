@@ -158,7 +158,7 @@ export default function DistressReporting() {
                     {organizationData.location}
                   </p>
                   <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', margin: 0 }}>
-                    Daily feeding in North & East Bengaluru; veterinary admissions at partner facilities.
+                    Community rescue operations in North & East Bengaluru; veterinary admissions at partner facilities.
                   </p>
                 </div>
               </div>

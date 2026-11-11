@@ -57,7 +57,7 @@ export const feedingData = {
     {
       amount: 5000,
       title: "Weekly Pack Sustenance",
-      description: "Guarantees uninterrupted daily feeding, vitamins, and deworming for 50 community animals for a full week.",
+      description: "Guarantees sustained community feeding drives, vitamins, and deworming for 50 community animals.",
       badge: "Community Hero"
     }
   ]

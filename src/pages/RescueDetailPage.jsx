@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { Calendar, MapPin, Heart, ArrowLeft, ShieldCheck, CheckCircle2, AlertCircle, Clock, Sparkles } from 'lucide-react';
+import { MapPin, Heart, ArrowLeft, ShieldCheck, CheckCircle2, AlertCircle, Sparkles } from 'lucide-react';
 import ImageComparisonSlider from '../components/ImageComparisonSlider';
 import rescuesData from '../data/rescues.json';
 import './RescueDetailPage.css';
@@ -16,13 +16,6 @@ export default function RescueDetailPage({ onOpenDonate }) {
   const displayName = rescue.animalName || rescue.name || 'Rescued Dog';
   const isRecovered = rescue.statusCode === 'recovered' || rescue.statusColor === 'emerald' || rescue.statusColor === 'purple';
   const otherRescues = rescuesData.filter((r) => r.id !== rescue.id).slice(0, 2);
-
-  const formatRescueDate = (dateVal) => {
-    if (!dateVal) return 'Verified Record';
-    if (/^\d{4}$/.test(dateVal) || /^[A-Za-z]+ \d{4}$/.test(dateVal)) return dateVal;
-    const d = new Date(dateVal);
-    return isNaN(d.getTime()) ? dateVal : d.toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
-  };
 
   const storyParagraphs = rescue.story 
     ? rescue.story.split('\n\n')
@@ -50,16 +43,6 @@ export default function RescueDetailPage({ onOpenDonate }) {
               <MapPin size={14} />
               {rescue.location}
             </span>
-            <span className="detail-date-text">
-              <Calendar size={14} />
-              Rescue Date: {formatRescueDate(rescue.rescueDate)}
-            </span>
-            {rescue.publishedDate && (
-              <span className="detail-date-text text-muted">
-                <Clock size={14} />
-                Published: {rescue.publishedDate}
-              </span>
-            )}
           </div>
 
           <h1 className="detail-title heading-display">
@@ -175,7 +158,7 @@ export default function RescueDetailPage({ onOpenDonate }) {
                 {rescue.supportGoal || `Sponsor ${displayName}'s Care`}
               </h3>
               <p className="support-card-desc">
-                Your direct contribution sponsors medicines, chemotherapy cycles, sterile bandages, and wholesome nutrition for {displayName}.
+                Your direct contribution sponsors medicines, veterinary treatment, sterile bandages, and wholesome nutrition for {displayName}.
               </p>
               {rescue.urgentNeed && (
                 <div className="urgent-need-box">
@@ -185,7 +168,7 @@ export default function RescueDetailPage({ onOpenDonate }) {
               )}
               <button 
                 type="button" 
-                onClick={() => onOpenDonate(isRecovered ? 5000 : 3500)}
+                onClick={() => onOpenDonate(5000)}
                 className="btn btn-primary btn-lg w-full"
               >
                 <Heart size={16} fill="currentColor" strokeWidth={0} />

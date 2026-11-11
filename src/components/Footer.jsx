@@ -75,9 +75,8 @@ export default function Footer({ onOpenDonate }) {
           <ul className="footer-links-list">
             <li><Link to="/">Home Overview</Link></li>
             <li><Link to="/about">About Our Mission</Link></li>
-            <li><Link to="/our-work">Our 4 Pillars</Link></li>
+            <li><Link to="/our-work">Our Work</Link></li>
             <li><Link to="/rescues">Latest Rescues Archive</Link></li>
-            <li><Link to="/feeding">Feeding Programme</Link></li>
             <li><Link to="/adopt">Adopt a Dog</Link></li>
             <li><Link to="/get-involved">Volunteer & Foster</Link></li>
             <li><Link to="/donate">Donate & Transparency</Link></li>

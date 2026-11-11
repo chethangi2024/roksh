@@ -187,7 +187,7 @@ export default function VolunteerForm() {
                       backgroundColor: '#FFFFFF',
                     }}
                   >
-                    <option value="feeding">Daily Feeding Drives (Morning)</option>
+                    <option value="feeding">Organised Feeding Drives</option>
                     <option value="rescue-transport">Rescue Transport & Vehicle Assistance</option>
                     <option value="foster">Temporary Foster Care for Recovering Pups</option>
                     <option value="awareness">Community Awareness & Education</option>

@@ -9,8 +9,8 @@ export default function RescuesPage({ onOpenDonate }) {
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredRescues = rescuesData.filter((rescue) => {
-    const isRecovered = rescue.statusCode === 'recovered' || rescue.statusBadge?.toLowerCase().includes('recover') || rescue.statusBadge?.toLowerCase().includes('adopt');
-    const isActive = rescue.statusCode === 'active' || !isRecovered;
+    const isActive = rescue.statusCode === 'active';
+    const isRecovered = rescue.statusCode === 'recovered';
 
     const matchesFilter = 
       activeFilter === 'all' ||
@@ -64,7 +64,7 @@ export default function RescuesPage({ onOpenDonate }) {
                 className={`filter-tab-btn ${activeFilter === 'active' ? 'active' : ''}`}
                 onClick={() => setActiveFilter('active')}
               >
-                Under Active Care ({rescuesData.filter((r) => r.statusCode === 'active').length})
+                Active Care ({rescuesData.filter((r) => r.statusCode === 'active').length})
               </button>
               <button
                 type="button"
@@ -97,7 +97,7 @@ export default function RescuesPage({ onOpenDonate }) {
                 <RescueCard
                   key={rescue.id}
                   rescue={rescue}
-                  onSupport={(r) => onOpenDonate(r.statusCode === 'recovered' ? 5000 : 3500)}
+                  onSupport={(r) => onOpenDonate(5000)}
                 />
               ))}
             </div>

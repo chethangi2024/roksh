@@ -7,35 +7,23 @@ import './DonatePage.css';
 
 const IMPACT_TIERS = [
   {
-    amount: 500,
-    title: '10 Nourishing Meals',
-    desc: 'Provides 10 warm turmeric rice and boiled egg bowls for street packs.',
-    tag: 'Daily Feeding'
-  },
-  {
-    amount: 1500,
-    title: 'Emergency Medical Kit',
-    desc: 'Supplies surgical dressings, antiseptic betadine, skin sprays & antibiotics for injured dogs.',
-    tag: 'Field Triage'
-  },
-  {
-    amount: 3500,
-    title: '1 Chemo Cycle (Sapna’s Fund)',
-    desc: 'Covers 1 session of intravenous oncology chemotherapy medication & clinical monitoring.',
-    tag: 'Critical Care'
+    amount: 3000,
+    title: 'Vaccinate & Protect',
+    desc: 'Support vaccination initiatives that help protect street dogs and cats from preventable diseases.',
+    tag: 'Prevention & Safety'
   },
   {
     amount: 5000,
-    title: '1 Month Safe Boarding',
-    desc: 'Funds safe housing, food, walks, and loving shelter for 1 vulnerable dog unable to survive on streets.',
-    tag: 'Lifelong Shelter'
+    title: 'Support Medical Care',
+    desc: 'Contribute towards veterinary consultations, medicines, and treatment for rescued animals.',
+    tag: 'Veterinary Treatment'
   }
 ];
 
 export default function DonatePage() {
   const { showToast } = useToast();
   const [copied, setCopied] = useState(false);
-  const [selectedTier, setSelectedTier] = useState(1500);
+  const [selectedTier, setSelectedTier] = useState(3000);
   const [customAmount, setCustomAmount] = useState('');
 
   const currentAmount = customAmount ? Number(customAmount) : selectedTier;
@@ -64,7 +52,7 @@ export default function DonatePage() {
             Direct & Transparent Animal Welfare Support
           </h1>
           <p className="page-hero-subtitle text-lead">
-            Every single rupee directly finances veterinary surgeries, chemotherapy cycles, daily food cauldrons, and safe boarding for Bengaluru's rescued animals.
+            Every single rupee directly finances veterinary consultations, life-saving surgeries, vaccinations, and critical care for Bengaluru's rescued animals.
           </p>
         </div>
       </section>
@@ -206,13 +194,13 @@ export default function DonatePage() {
           <div className="grid-3 allocation-grid">
             <div className="allocation-card">
               <span className="alloc-percent">60%</span>
-              <h3 className="alloc-title">Emergency Medical & Oncology</h3>
-              <p className="alloc-desc">Veterinary hospital bills, cancer chemotherapy vials, surgeries, blood diagnostics, and specialized medicines.</p>
+              <h3 className="alloc-title">Emergency Medical & Veterinary Care</h3>
+              <p className="alloc-desc">Veterinary hospital bills, surgical procedures, blood diagnostics, vaccinations, and specialized medicines.</p>
             </div>
             <div className="allocation-card">
               <span className="alloc-percent">25%</span>
-              <h3 className="alloc-title">Daily Street Sustenance</h3>
-              <p className="alloc-desc">Raw grocery ingredients (rice, eggs, poultry broth), gas for giant cooking cauldrons, and fuel for mobile routes.</p>
+              <h3 className="alloc-title">Community Feeding Drives</h3>
+              <p className="alloc-desc">Fresh grocery ingredients (rice, eggs, poultry broth), gas for cooking cauldrons, and logistics for feeding drives.</p>
             </div>
             <div className="allocation-card">
               <span className="alloc-percent">15%</span>

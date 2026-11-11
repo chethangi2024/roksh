@@ -30,7 +30,7 @@ export default function AboutPage({ onOpenDonate }) {
               Roksh Samsthe Foundation began not as an institution, but as a personal commitment: to never look away when a vulnerable animal is suffering on the streets of Bengaluru. What started as individual rescue responses has evolved into an active, verified animal welfare foundation.
             </p>
             <p>
-              From emergency rescues and high-complexity medical treatments—such as intravenous cancer chemotherapy and intensive mange rehabilitation—to daily sustenance feeding drives, sterilizations, and careful adoptions, we work tirelessly to grant every dog and cat a dignified second chance.
+              From emergency rescues and high-complexity medical treatments—such as intensive mange rehabilitation and dedicated veterinary care—to organised feeding drives, sterilisation, and careful adoptions, we work tirelessly to grant every dog and cat a dignified second chance.
             </p>
             <p className="quote-callout">
               “With every rescue and every story of recovery, Roksh Samsthe stands for one simple, unshakeable belief: every life matters.”
@@ -92,7 +92,7 @@ export default function AboutPage({ onOpenDonate }) {
               <div className="p-num">01</div>
               <h3 className="p-title">100% Genuine Evidence</h3>
               <p className="p-desc">
-                We never use generic stock imagery or simulated stories. Every photograph, date, and medical case published on this website reflects real dogs under our direct care.
+                We never use generic stock imagery or simulated stories. Every photograph, medical case, and update published on this website reflects real dogs under our direct care.
               </p>
             </div>
 
@@ -122,7 +122,7 @@ export default function AboutPage({ onOpenDonate }) {
             Be a Guardian for the Voiceless
           </h2>
           <p className="text-lead text-gray mb-6 max-w-2xl mx-auto">
-            Your support makes emergency rescues, chemotherapy medications, and daily feeding drives possible. Join our mission today.
+            Your support makes emergency rescues, vital medical treatments, feeding drives, and adoption possible. Join our mission today.
           </p>
           <div className="flex-center-gap">
             <button 

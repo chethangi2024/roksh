@@ -4,7 +4,7 @@ import confetti from 'canvas-confetti';
 import { organizationData } from '../data/organization';
 
 export default function DonationVault({ initialAmount, initialNote, onDone }) {
-  const [selectedAmount, setSelectedAmount] = useState(initialAmount || 1500);
+  const [selectedAmount, setSelectedAmount] = useState(initialAmount || 3000);
   const [customAmount, setCustomAmount] = useState('');
   const [copiedUpi, setCopiedUpi] = useState(false);
   const [copiedBank, setCopiedBank] = useState(false);
@@ -13,10 +13,16 @@ export default function DonationVault({ initialAmount, initialNote, onDone }) {
   const [hasConfirmed, setHasConfirmed] = useState(false);
 
   const tiers = [
-    { amount: 500, label: "Feed 10 Dogs", desc: "Wholesome fresh food & broth for 10 dogs" },
-    { amount: 1500, label: "Chemo / Blood Panel", desc: "Covers 1 chemotherapy vial or diagnostic panel" },
-    { amount: 3000, label: "Medical & Wound Care", desc: "Anti-parasitic dips & emergency wound care" },
-    { amount: 5000, label: "Monthly Boarding", desc: "Full month of safe shelter & nutrition" },
+    { 
+      amount: 3000, 
+      label: "Vaccinate & Protect", 
+      desc: "Support vaccination initiatives that help protect street dogs and cats from preventable diseases." 
+    },
+    { 
+      amount: 5000, 
+      label: "Support Medical Care", 
+      desc: "Contribute towards veterinary consultations, medicines, and treatment for rescued animals." 
+    },
   ];
 
   const handleCopyUpi = () => {
@@ -55,7 +61,7 @@ export default function DonationVault({ initialAmount, initialNote, onDone }) {
           </div>
           <h2>Support Roksh Samsthe Foundation</h2>
           <p>
-            100% of your contribution goes directly into life-saving veterinary treatment, chemotherapy, daily feeding cauldrons, and safe boarding for Bengaluru's street animals.
+            100% of your contribution goes directly into life-saving veterinary treatment, vaccinations, medicines, and safe shelter for Bengaluru's street animals.
           </p>
         </div>
 

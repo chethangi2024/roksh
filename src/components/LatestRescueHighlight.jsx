@@ -86,11 +86,6 @@ export default function LatestRescueHighlight({ rescue, onOpenStory, onSupportRe
                 </span>
 
                 <div className="rescue-date-tag">
-                  <Calendar size={15} />
-                  <span>Rescued: {rescue.rescueDate}</span>
-                </div>
-
-                <div className="rescue-date-tag">
                   <MapPin size={15} />
                   <span>{rescue.location}</span>
                 </div>

@@ -47,7 +47,7 @@ export default function App() {
             <Route path="/our-work" element={<OurWorkPage onOpenDonate={handleOpenDonate} />} />
             <Route path="/rescues" element={<RescuesPage onOpenDonate={handleOpenDonate} />} />
             <Route path="/rescues/:id" element={<RescueDetailPage onOpenDonate={handleOpenDonate} />} />
-            <Route path="/feeding" element={<FeedingPage onOpenDonate={handleOpenDonate} />} />
+            <Route path="/feeding" element={<Navigate to="/our-work#feeding-drives" replace />} />
             <Route path="/adopt" element={<AdoptPage onOpenDonate={handleOpenDonate} />} />
             <Route path="/get-involved" element={<GetInvolvedPage onOpenDonate={handleOpenDonate} />} />
             <Route path="/donate" element={<DonatePage />} />

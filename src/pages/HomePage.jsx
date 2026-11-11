@@ -5,32 +5,23 @@ import {
   ArrowRight, 
   ShieldCheck, 
   Activity, 
-  Calendar, 
   MapPin, 
   Sparkles, 
   CheckCircle2, 
   Utensils, 
   AlertCircle,
   Copy,
-  Check,
-  Play
+  Check
 } from 'lucide-react';
-import ImageComparisonSlider from '../components/ImageComparisonSlider';
 import RescueCard from '../components/RescueCard';
-import FeedingCard from '../components/FeedingCard';
-import AdoptionCard from '../components/AdoptionCard';
-import PosterModal from '../components/PosterModal';
 import { useToast } from '../context/ToastContext';
 import rescuesData from '../data/rescues.json';
-import feedingData from '../data/feeding.json';
 import siteContent from '../data/siteContent.json';
-import { adoptionDogs } from '../data/adoption';
 import './HomePage.css';
 
 export default function HomePage({ onOpenDonate }) {
   const { showToast } = useToast();
   const [copied, setCopied] = React.useState(false);
-  const [selectedPosterDog, setSelectedPosterDog] = React.useState(null);
 
   // Latest rescue record (Sapna)
   const latestRescue = rescuesData.find((r) => r.isLatest) || rescuesData[0];
@@ -53,12 +44,18 @@ export default function HomePage({ onOpenDonate }) {
         <div className="container hero-container">
           <div className="hero-content">
             <h1 className="hero-heading heading-display">
-              Every Voiceless Life Deserves <span className="text-gold">Healing, Dignity</span> & a Second Chance.
+              ROKSH Samsthe <span className="text-gold">Foundation</span>
             </h1>
 
-            <p className="hero-description text-lead">
-              From emergency street rescues and specialized cancer chemotherapy to daily sustenance feeding drives across Bengaluru, Roksh Samsthe Foundation turns compassion into tangible medical and community relief.
-            </p>
+            <div className="hero-intro-text">
+              <p className="hero-description">
+                At ROKSH Samsthe Foundation, we work to make life safer and kinder for street dogs and cats. From rescuing animals in need and helping them recover to finding loving homes and supporting their lives beyond rescue, we believe every animal deserves care, dignity, and protection.
+              </p>
+
+              <p className="hero-description">
+                Our work goes beyond individual rescues. Through community awareness, vaccination and sterilisation drives, feeding initiatives, and reflective collar drives, we strive to create safer communities for animals and people alike.
+              </p>
+            </div>
 
             <div className="hero-cta-group">
               <button 
@@ -123,7 +120,7 @@ export default function HomePage({ onOpenDonate }) {
               {latestRescue.title}
             </h2>
             <p className="latest-rescue-subtitle">
-              Demonstrating our ongoing work through genuine photographs, verified rescue dates, and real clinical progress.
+              Demonstrating our ongoing work through genuine photographs, verified field documentation, and real clinical progress.
             </p>
           </div>
 
@@ -136,7 +133,7 @@ export default function HomePage({ onOpenDonate }) {
                   alt="Sapna smiling in recovery" 
                   className="featured-frame-img"
                 />
-                <span className="frame-overlay-tag">Recovery Progress (17 Oct 2026)</span>
+                <span className="frame-overlay-tag">Active Recovery Progress</span>
               </div>
               <div className="featured-secondary-grid">
                 <div className="sub-frame">
@@ -167,21 +164,6 @@ export default function HomePage({ onOpenDonate }) {
                 </span>
               </div>
 
-              <div className="rescue-dates-grid">
-                <div className="date-cell">
-                  <span className="cell-label">Rescue Date</span>
-                  <strong className="cell-val">10 October 2026</strong>
-                </div>
-                <div className="date-cell">
-                  <span className="cell-label">Published</span>
-                  <strong className="cell-val">17 October 2026</strong>
-                </div>
-                <div className="date-cell">
-                  <span className="cell-label">Last Clinical Check</span>
-                  <strong className="cell-val">22 October 2026</strong>
-                </div>
-              </div>
-
               <div className="diagnosis-box">
                 <span className="diag-label">Confirmed Veterinary Diagnosis</span>
                 <p className="diag-text">{latestRescue.diagnosis}</p>
@@ -204,13 +186,34 @@ export default function HomePage({ onOpenDonate }) {
 
                 <button 
                   type="button" 
-                  onClick={() => onOpenDonate(3500)}
+                  onClick={() => onOpenDonate(5000)}
                   className="btn btn-primary"
                 >
                   <Heart size={16} fill="currentColor" strokeWidth={0} />
-                  <span>Support Sapna's Chemo (₹3,500)</span>
+                  <span>Support Medical Care (₹5,000)</span>
                 </button>
               </div>
+            </div>
+          </div>
+
+          {/* More Rescued Lives showcase directly under latest rescue */}
+          <div className="recent-rescues-showcase-block">
+            <div className="other-rescues-header">
+              <h3 className="heading-display text-xl font-bold">More Rescued Lives</h3>
+              <Link to="/rescues" className="view-all-link">
+                <span>View All Stories ({rescuesData.length})</span>
+                <ArrowRight size={14} />
+              </Link>
+            </div>
+
+            <div className="grid-3 rescues-showcase-grid">
+              {otherRescues.map((rescue) => (
+                <RescueCard 
+                  key={rescue.id} 
+                  rescue={rescue} 
+                  onSupport={(r) => onOpenDonate(5000)} 
+                />
+              ))}
             </div>
           </div>
         </div>
@@ -241,212 +244,7 @@ export default function HomePage({ onOpenDonate }) {
       </section>
 
       {/* =========================================================================
-          SECTION 4: WHAT WE DO (OUR 4 CORE PILLARS)
-          ========================================================================= */}
-      <section className="pillars-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Our Work in Action</h2>
-            <p className="section-description">
-              A comprehensive approach to animal welfare: from the moment of emergency distress call to lifelong recovery and nourishment.
-            </p>
-          </div>
-
-          <div className="grid-4 pillars-grid">
-            {siteContent.pillars.map((pillar) => (
-              <div key={pillar.id} className="pillar-card card-hover">
-                <div className="pillar-media">
-                  <img src={pillar.image} alt={pillar.title} className="pillar-img" loading="lazy" />
-                </div>
-                <div className="pillar-body">
-                  <h3 className="pillar-title">{pillar.title}</h3>
-                  <p className="pillar-desc">{pillar.shortDesc}</p>
-                  <Link to="/our-work" className="pillar-link">
-                    <span>Learn how we work</span>
-                    <ArrowRight size={14} />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================================
-          SECTION 5: FEATURED RESCUE STORIES (BEFORE & AFTER RECOVERY)
-          ========================================================================= */}
-      <section className="transformations-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">The Power of Timely Intervention</h2>
-            <p className="section-description">
-              Witness how medical care and nutrition completely transformed Siddu from severe mange to joyful boarding.
-            </p>
-          </div>
-
-          <div className="transformation-showcase">
-            <div className="slider-wrapper-box">
-              <ImageComparisonSlider
-                beforeImage="/assets/rescues/siddu-before.jpg"
-                afterImage="/assets/rescues/siddu-recovered.png"
-                beforeLabel="Before Rescue: Severe Mange"
-                afterLabel="Fully Recovered in Boarding"
-                altText="Siddu before and after skin infection treatment"
-              />
-            </div>
-
-            <div className="transformation-info-box">
-              <h3 className="trans-title heading-editorial">
-                Siddu’s Journey: From Raw Pain to Bandana Smiles
-              </h3>
-              <p className="trans-desc">
-                Rescued hairless, emaciated, and suffering from acute generalized mange. Through intensive medicated dips, wound dressings, and love, his coat returned completely. Today he stays at a peaceful boarding facility.
-              </p>
-              <div className="trans-meta-list">
-                <span><strong>Breed:</strong> Indie Male</span>
-                <span><strong>Treatment:</strong> Medicated skin baths & anti-parasitic course</span>
-                <span><strong>Current Home:</strong> Long-term boarding facility</span>
-              </div>
-              <div className="trans-actions">
-                <Link to="/rescues/rescue-siddu-mange" className="btn btn-secondary btn-sm">
-                  <span>Read Siddu's Full Story</span>
-                  <ArrowRight size={14} />
-                </Link>
-                <button 
-                  type="button" 
-                  onClick={() => onOpenDonate(5000)}
-                  className="btn btn-primary btn-sm"
-                >
-                  <Heart size={14} fill="currentColor" strokeWidth={0} />
-                  <span>Sponsor Siddu's Boarding (₹5,000)</span>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Additional Rescues Grid */}
-          <div className="other-rescues-header">
-            <h3 className="heading-display text-xl font-bold">More Rescued Lives</h3>
-            <Link to="/rescues" className="view-all-link">
-              <span>View All Stories ({rescuesData.length})</span>
-              <ArrowRight size={14} />
-            </Link>
-          </div>
-
-          <div className="grid-3 rescues-showcase-grid">
-            {otherRescues.map((rescue) => (
-              <RescueCard 
-                key={rescue.id} 
-                rescue={rescue} 
-                onSupport={(r) => onOpenDonate(r.id === 'rescue-siddu-mange' ? 5000 : 3500)} 
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================================
-          SECTION 6: THE FEEDING PROGRAMME (FIELD SPOTLIGHT)
-          ========================================================================= */}
-      <section className="feeding-spotlight-section">
-        <div className="container">
-          <div className="feeding-spotlight-banner">
-            <div className="feeding-spotlight-content">
-              <h2 className="feeding-spotlight-title heading-display">
-                Nourishing Hundreds of Voiceless Lives Across Bengaluru
-              </h2>
-              <p className="feeding-spotlight-desc">
-                Hunger is the silent crisis street dogs face every day. Our volunteers cook giant cauldrons of hot, protein-rich turmeric rice and boiled eggs, distributing them systematically across commercial and industrial pockets where scraps are nonexistent.
-              </p>
-
-              <div className="feeding-quick-stats">
-                <div className="f-stat">
-                  <strong>150+</strong>
-                  <span>Meals Per Drive</span>
-                </div>
-                <div className="f-stat">
-                  <strong>100%</strong>
-                  <span>Fresh Cooked Meat & Rice</span>
-                </div>
-                <div className="f-stat">
-                  <strong>Zero</strong>
-                  <span>Street Litter Left Behind</span>
-                </div>
-              </div>
-
-              <div className="feeding-spotlight-ctas">
-                <Link to="/feeding" className="btn btn-dark">
-                  <span>Explore Feeding Routes & Gallery</span>
-                  <ArrowRight size={16} />
-                </Link>
-                <button 
-                  type="button" 
-                  onClick={() => onOpenDonate(500)}
-                  className="btn btn-primary"
-                >
-                  <Utensils size={16} />
-                  <span>Sponsor 10 Meals (₹500)</span>
-                </button>
-              </div>
-            </div>
-
-            <div className="feeding-spotlight-media">
-              <div className="feeding-media-frame">
-                <img 
-                  src="/assets/feeding/feeding-cauldron-boot.jpeg" 
-                  alt="Roksh volunteers serving fresh food from heavy cauldrons in car boot"
-                  className="feeding-cauldron-img" 
-                />
-                <div className="feeding-media-caption">
-                  <span>Cauldron meal dispatch during feeding drive</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================================
-          SECTION 7: MEET THE DOGS (ADOPTION SHOWCASE)
-          ========================================================================= */}
-      <section className="home-adoption-section" aria-label="Adoption Showcase">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Meet Dogs Up For Adoption</h2>
-            <p className="section-description">
-              Rescued from trauma, nurtured back to vibrant health, and eager to give a lifetime of unconditional love. Every dog below has verified health status and is waiting for a compassionate Bengaluru family.
-            </p>
-          </div>
-
-          <div className="home-adoption-grid">
-            {adoptionDogs
-              .filter((d) => ['adopt-bittu', 'adopt-siddu', 'adopt-snowy', 'adopt-lucy'].includes(d.id))
-              .map((dog) => (
-                <AdoptionCard 
-                  key={dog.id} 
-                  dog={dog} 
-                  onSelect={(d) => setSelectedPosterDog(d)} 
-                />
-              ))}
-          </div>
-
-          <div className="home-adoption-footer-banner">
-            <div className="home-adoption-footer-info">
-              <h3 className="home-adoption-footer-title">Looking for a specific age, companion or temperament?</h3>
-              <p className="home-adoption-footer-text">
-                Browse our complete collection of {adoptionDogs.length} authentic rescue posters — from 45-day indie puppies to devoted adult survivors like Siddu.
-              </p>
-            </div>
-            <Link to="/adopt" className="btn btn-primary btn-lg">
-              <span>Explore All {adoptionDogs.length} Adoption Candidates</span>
-              <ArrowRight size={18} />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================================
-          SECTION 8: HOW YOU CAN GET INVOLVED
+          SECTION 4: HOW YOU CAN GET INVOLVED
           ========================================================================= */}
       <section className="get-involved-section">
         <div className="container">
@@ -465,7 +263,7 @@ export default function HomePage({ onOpenDonate }) {
               </div>
               <h3 className="involve-card-title">1. Donate Funds via Instant UPI</h3>
               <p className="involve-card-text">
-                Support critical chemotherapy vials, emergency ambulance runs, wound antiseptics, and daily feeding cauldrons with direct UPI transfer.
+                Support emergency veterinary care, life-saving medicines, wound antiseptics, and community feeding drives with direct UPI transfer.
               </p>
               <div className="involve-card-footer">
                 <button 
@@ -501,7 +299,7 @@ export default function HomePage({ onOpenDonate }) {
               </div>
               <h3 className="involve-card-title">3. Volunteer or Foster Care</h3>
               <p className="involve-card-text">
-                Join our weekend feeding drives, provide temporary foster warmth to recovering dogs or puppies, or assist with photography and transport.
+                Join our community feeding drives, provide temporary foster warmth to recovering dogs or puppies, or assist with photography and transport.
               </p>
               <div className="involve-card-footer">
                 <Link to="/get-involved#volunteer" className="btn btn-secondary btn-sm w-full">
@@ -514,7 +312,7 @@ export default function HomePage({ onOpenDonate }) {
       </section>
 
       {/* =========================================================================
-          SECTION 9: TRANSPARENCY & DIRECT BANKING VAULT
+          SECTION 5: TRANSPARENCY & DIRECT BANKING VAULT
           ========================================================================= */}
       <section className="bank-vault-section">
         <div className="container">
@@ -576,14 +374,6 @@ export default function HomePage({ onOpenDonate }) {
           </div>
         </div>
       </section>
-
-      {/* Full Resolution Adoption Poster Modal */}
-      {selectedPosterDog && (
-        <PosterModal 
-          dog={selectedPosterDog} 
-          onClose={() => setSelectedPosterDog(null)} 
-        />
-      )}
     </div>
   );
 }

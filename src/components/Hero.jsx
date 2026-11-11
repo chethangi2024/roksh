@@ -8,18 +8,19 @@ export default function Hero({ onOpenDonate, onExploreRescues }) {
         <div className="hero-grid">
           {/* Hero Left Content Column */}
           <div className="hero-content">
-            <div className="section-pill">
-              <span className="live-beacon"></span>
-              <span>Bengaluru Animal Rescue & Medical Welfare</span>
-            </div>
-
             <h1 className="hero-title">
-              Every voiceless life deserves <span className="highlight-amber">healing, dignity</span> and a second chance.
+              ROKSH Samsthe <span className="highlight-amber">Foundation</span>
             </h1>
 
-            <p className="hero-lead">
-              From emergency street rescues and critical cancer care to daily feeding drives across Bengaluru, Roksh Samsthe Foundation turns compassion into real, verified action. Every photo here is real. Every animal has a name.
-            </p>
+            <div className="hero-intro-text">
+              <p className="hero-lead">
+                At ROKSH Samsthe Foundation, we work to make life safer and kinder for street dogs and cats. From rescuing animals in need and helping them recover to finding loving homes and supporting their lives beyond rescue, we believe every animal deserves care, dignity, and protection.
+              </p>
+
+              <p className="hero-lead">
+                Our work goes beyond individual rescues. Through community awareness, vaccination and sterilisation drives, feeding initiatives, and reflective collar drives, we strive to create safer communities for animals and people alike.
+              </p>
+            </div>
 
             <div className="hero-actions">
               <button onClick={onOpenDonate} className="btn btn-primary btn-lg">
@@ -64,7 +65,7 @@ export default function Hero({ onOpenDonate, onExploreRescues }) {
               <div className="hero-badge-header">
                 <span className="badge badge-amber">
                   <span className="live-beacon"></span>
-                  LATEST FIELD UPDATE • OCTOBER 2026
+                  LATEST FIELD UPDATE • ACTIVE RECOVERY
                 </span>
                 <span className="text-xs" style={{ color: '#E5E7EB', fontWeight: 600 }}>
                   Bengaluru, KA

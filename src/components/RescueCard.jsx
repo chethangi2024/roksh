@@ -1,19 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, MapPin, ArrowRight, Heart } from 'lucide-react';
+import { MapPin, ArrowRight, Heart } from 'lucide-react';
 import './RescueCard.css';
 
 export default function RescueCard({ rescue, onSupport }) {
   const isRecovered = rescue.statusCode === 'recovered';
   const displayName = rescue.animalName || rescue.name || 'Rescued Friend';
   const displayBreed = rescue.species || rescue.breed || 'Indie';
-
-  const formatRescueDate = (dateVal) => {
-    if (!dateVal) return 'Verified Rescue';
-    if (/^\d{4}$/.test(dateVal)) return dateVal;
-    const d = new Date(dateVal);
-    return isNaN(d.getTime()) ? dateVal : d.toLocaleDateString('en-IN', { month: 'short', year: 'numeric' });
-  };
 
   return (
     <article className="rescue-card card-hover">
@@ -28,10 +21,6 @@ export default function RescueCard({ rescue, onSupport }) {
 
       <div className="rescue-card-content">
         <div className="rescue-meta-row">
-          <span className="rescue-date-text">
-            <Calendar size={13} />
-            Rescue: {formatRescueDate(rescue.rescueDate)}
-          </span>
           <span className="rescue-loc-text">
             <MapPin size={13} />
             {rescue.location}

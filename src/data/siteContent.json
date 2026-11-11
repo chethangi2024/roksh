@@ -24,7 +24,7 @@
     "bankName": "IDFC FIRST Bank",
     "accountType": "Foundation / Current Account",
     "qrImage": "/assets/bank-qr.jpeg",
-    "note": "100% of your contributions directly power medical treatments, chemotherapy, medicines, foster food, and field rescue operations.",
+    "note": "100% of your contributions directly power veterinary care, vaccinations, medicines, foster food, and field rescue operations.",
     "taxExemptionNote": "Tax benefit details and official payment acknowledgement receipts can be requested by emailing rokshsamsthe@gmail.com with your transaction reference."
   },
   "pillars": [
@@ -43,11 +43,12 @@
       "image": "/assets/rescues/sapna-treatment.png"
     },
     {
-      "id": "community-feeding",
-      "title": "Daily Community Feeding",
-      "shortDesc": "Nourishing hungry street dogs across commercial zones and industrial sectors with wholesome, hygienic cooked meals.",
-      "icon": "Utensils",
-      "image": "/assets/feeding/feeding-cauldron-boot.jpeg"
+      "id": "adoption-homes",
+      "title": "Adoption",
+      "subtitle": "Finding Forever Homes",
+      "shortDesc": "We actively search for loving, responsible families for our rescued dogs and cats. Every adoption is a chance to give them the safety, care, and forever home they deserve.",
+      "icon": "Heart",
+      "image": "/assets/adoption/Siddu@2x.png"
     },
     {
       "id": "lifelong-boarding",
@@ -64,14 +65,14 @@
       "detail": "Every animal shown is an actual Roksh rescue case with medical documentation."
     },
     {
-      "value": "Active",
-      "label": "Daily Street Feeding",
-      "detail": "Nutritious cooked meals distributed consistently along verified Bengaluru routes."
+      "value": "Adoption",
+      "label": "Finding Forever Homes",
+      "detail": "We actively search for loving, responsible families for our rescued dogs and cats. Every adoption is a chance to give them the safety, care, and forever home they deserve."
     },
     {
       "value": "Critical",
-      "label": "Chemotherapy & Care",
-      "detail": "Comprehensive cancer care and dermatological rehabilitation under veterinary care."
+      "label": "Urgent Medical Treatment",
+      "detail": "Urgent medical treatment and essential care when they need it most."
     },
     {
       "value": "Lifelong",
